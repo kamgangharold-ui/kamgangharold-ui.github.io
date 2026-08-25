@@ -1,0 +1,61 @@
+{
+  "meta.title": "Pink Ducks — partner-led growth strategy | Harold Kamgang",
+  "meta.desc": "Final Master's thesis: a B2B distribution strategy for an electric bike tour operator in Barcelona. Partner segmentation, three incentive models, a 90-day pilot, and an AI voice app.",
+
+  "a11y.skip": "Skip to main content",
+  "nav.back": "← All achievements",
+
+  "p.kicker": "B2B strategy · CSR · Final Master's thesis",
+  "p.title": "Pink Ducks — partner-led growth strategy",
+  "p.sub": "A B2B distribution strategy for a guided electric bike tour operator in Barcelona",
+
+  "p.m1.k": "Setting",
+  "p.m1.v": "Final Master's thesis, EAE Business School / Universitat de Lleida",
+  "p.m2.k": "Period",
+  "p.m2.v": "December 2025 – July 2026",
+  "p.m3.k": "Team",
+  "p.m3.v": "A three-person project: Bulbuli Bala, Gracia Muhune Nyota and myself",
+  "p.m4.k": "Deliverable",
+  "p.m4.v": "A 77-page management report, defended in July 2026",
+
+  "p.h1": "The problem",
+  "p.p1": "Pink Ducks sold its electric bike tours almost entirely through online travel agencies. Those platforms take high commissions, set their own terms, and stand between the company and its customers. The question was easy to state and hard to answer: how do you build a direct B2B distribution channel that reduces that dependence, without a marketing budget the company does not have.",
+
+  "p.h2": "The method",
+  "p.p2": "We worked in two stages. First, building assumptions from six simulated expert personas — luxury hotels, hostels, destination management companies, concierges. Then testing those assumptions in the field: <b>six real interviews</b> and <b>nine market sources</b>, in a mixed-methods design.",
+  "p.p2b": "That sequencing was not decorative. It forced us to write our assumptions down before going out to test them, and therefore to face the gaps instead of smoothing them over.",
+
+  "p.h3": "What the fieldwork disproved",
+  "p.call": "Concierges at five-star hotels are strictly forbidden from accepting a commission or displaying a QR code on their desk.",
+  "p.p3": "Our entire incentive architecture rested on commission and QR-code tracking. On the most profitable segment, it was unusable. We rebuilt the model rather than ignoring the finding: for luxury hotels, a trust-based relationship where the concierge books directly, with no commission; QR-code tracking was kept only for hostels and four-star properties.",
+  "p.p3b": "That is what I take away most from this work: an assumption can be plausible, internally consistent, and still wrong — and only the field will tell you.",
+
+  "p.h4": "What we produced",
+  "p.d1.k": "A multi-criteria selection framework",
+  "p.d1.v": "Scoring potential partners against weighted criteria, producing a prioritised list of the top 20 partners to approach — where outreach had previously been ad hoc, with no criteria at all.",
+  "p.d2.k": "Three incentive models, one per partner type",
+  "p.d2.v": "Confidential net rates for destination management companies; a zero-commission relationship model for luxury hotels; tiered commissions for high-volume properties.",
+  "p.d3.k": "A standardised commercial documentation set",
+  "p.d3.v": "Rate cards, co-branded sheets, an operating protocol, and an attribution system that makes every booking traceable.",
+  "p.d4.k": "A measurable 90-day pilot",
+  "p.d4.v": "With success and failure thresholds defined up front — for instance, fewer than 20% of contacted partners referring a booking within 60 days is a stop signal.",
+  "p.d5.k": "Barcelona CycleGuide",
+  "p.d5.v": "An AI voice app for self-guided tours, designed to absorb the additional volume without overloading the founder.",
+  "p.d6.k": "An international expansion framework",
+  "p.d6.v": "Lisbon, Amsterdam and Paris assessed; Lisbon chosen first for its market and regulatory overlap — but conditional on hitting the Barcelona pilot targets.",
+
+  "p.h5": "The outcome",
+  "p.p5": "The combined strategy projects between <b>€38,500 and €75,700</b> in incremental net revenue in year one. The app technology exports easily; the trust-based concierge relationships do not — they have to be rebuilt locally in each market. We wrote that down plainly rather than selling a frictionless expansion.",
+
+  "p.h6": "The sustainability angle",
+  "p.p6": "Three Sustainable Development Goals are built into the commercial logic, not appended at the end of the report:",
+  "p.odd8": "Decent work and growth: better B2B margins fund better-paid guides and create additional income for concierge teams and agencies.",
+  "p.odd11": "Sustainable cities: an electric bike tour is a zero-emission urban transport mode, distributed through channels whose clients carry ESG purchasing requirements.",
+  "p.odd17": "Partnerships: each partner type contributes a distinct capability and receives differentiated value in return.",
+
+  "p.h7": "What this brings to a QSE role",
+  "p.p7": "This is not a quality project, and I do not present it as one. What it demonstrates lies elsewhere: building a weighted criteria framework and sticking to it, going out to verify an assumption instead of assuming it, handling a gap by rebuilding the approach rather than working around it, standardising a documentation set, and defining success thresholds before launching. Those are exactly the reflexes of a continuous improvement approach.",
+
+  "p.back": "← Back to all achievements",
+  "foot.note": "Hand-built site — no trackers, no cookies."
+}

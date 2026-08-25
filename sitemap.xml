@@ -10,4 +10,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kamgangharold-ui.github.io/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kamgangharold-ui.github.io/"/>
   </url>
+  <url>
+    <loc>https://kamgangharold-ui.github.io/projets/pink-ducks.html</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kamgangharold-ui.github.io/projets/pink-ducks.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kamgangharold-ui.github.io/projets/pink-ducks.html?lang=en"/>
+  </url>
 </urlset>

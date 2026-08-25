@@ -46,9 +46,13 @@
     try { localStorage.setItem(KEY, lang); } catch (e) { /* navigation privée */ }
   }
 
+  // Les pages projet vivent dans un sous-dossier : elles declarent leur propre
+  // chemin de dictionnaire via <html data-i18n-path="...">.
+  var basePath = document.documentElement.dataset.i18nPath || "assets/i18n/";
+
   function load(lang) {
     if (dict[lang]) { paint(lang); return; }
-    fetch("assets/i18n/" + lang + ".json")
+    fetch(basePath + lang + ".json")
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (json) { dict[lang] = json; paint(lang); })
       .catch(function () {

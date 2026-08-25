@@ -345,3 +345,49 @@ html { scroll-behavior: smooth; scroll-padding-top: 74px; }
   .site-header, .sec--cta, .foot, .hero__cta { display: none; }
   body { font-size: 11pt; color: #000; background: #fff; }
 }
+
+/* ───────── Pages projet ───────── */
+.hero--proj { padding-bottom: 1.5rem; }
+.proj__h1 {
+  font-size: clamp(1.9rem, 5vw, 3rem); font-weight: 700;
+  margin: .3rem 0 .5rem; max-width: 22ch;
+}
+.nav__menu--sub a { font-size: .92rem; }
+
+.meta { list-style: none; margin: 2rem 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+.meta li { border-left: 3px solid var(--accent); padding-left: .9rem; }
+.meta b { display: block; font-family: var(--f-head); font-size: .76rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .11em; color: var(--accent); margin-bottom: .15rem; }
+.meta span { font-size: .93rem; color: var(--txt-2); }
+
+.prose--proj { max-width: 74ch; }
+.prose--proj h2 {
+  font-size: 1.45rem; text-transform: uppercase; letter-spacing: .02em;
+  margin: 2.4rem 0 .8rem; padding-bottom: .4rem; border-bottom: 2px solid var(--line);
+}
+.prose--proj h2:first-child { margin-top: 0; }
+
+.callout {
+  background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--rose);
+  border-radius: var(--r); padding: 1.1rem 1.3rem; margin: 1.2rem 0; box-shadow: var(--sh);
+}
+.callout p { margin: 0; font-size: 1.08rem; font-family: var(--f-head); color: var(--head); }
+
+.deliv { list-style: none; margin: 1.2rem 0; padding: 0; display: grid; gap: 1rem; }
+.deliv li { border-left: 3px solid var(--accent); padding-left: 1rem; }
+.deliv b { display: block; font-family: var(--f-head); font-size: 1.03rem; color: var(--head); margin-bottom: .15rem; }
+.deliv span { font-size: .96rem; color: var(--txt-2); }
+.deliv--odd li { border-left-color: var(--rose); }
+.deliv--odd b { font-size: .95rem; letter-spacing: .06em; }
+
+.backlink { margin-top: 2.6rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+.backlink a { font-family: var(--f-head); text-decoration: none; }
+.backlink a:hover { text-decoration: underline; }
+
+.card__more {
+  margin-top: auto; padding-top: .9rem;
+  font-family: var(--f-head); font-size: .92rem; font-weight: 600;
+  text-decoration: none; color: var(--accent);
+}
+.card__more:hover { text-decoration: underline; }
