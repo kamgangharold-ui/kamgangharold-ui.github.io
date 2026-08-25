@@ -1,0 +1,14 @@
+# Fichiers systeme
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Rien de personnel ne doit atterrir ici : le depot est PUBLIC.
+*passport*
+*Passport*
+*passeport*
+*bank*statement*
+*Bank*Statement*
+*.env
+*secret*
+*token*
