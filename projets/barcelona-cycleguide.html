@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="auto" data-i18n-path="i18n/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barcelona CycleGuide — application mobile vocale assistée par IA | Harold Kamgang</title>
+<meta name="description" content="Conception et développement d'une application mobile vocale et géolocalisée : React Native, Firebase, moteur de géorepérage sur mesure, IA multilingue en six langues. 42 heures, 20 phases.">
+<link rel="canonical" href="https://kamgangharold-ui.github.io/projets/barcelona-cycleguide.html">
+<meta name="theme-color" content="#0A1128">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Barcelona CycleGuide — application mobile vocale assistée par IA">
+<meta property="og:description" content="React Native, Firebase, géorepérage maison, IA en six langues. Conçue, codée et livrée en 42 heures.">
+<meta property="og:url" content="https://kamgangharold-ui.github.io/projets/barcelona-cycleguide.html">
+<meta property="og:image" content="https://kamgangharold-ui.github.io/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://kamgangharold-ui.github.io/assets/img/og.png">
+
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+<a class="skip" href="#main">Aller au contenu principal</a>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Navigation principale">
+    <a class="nav__brand" href="../"><span>Harold</span> Kamgang</a>
+    <ul class="nav__menu nav__menu--sub" id="navmenu">
+      <li><a href="../#projects">← Toutes les réalisations</a></li>
+    </ul>
+    <div class="nav__tools">
+      <button class="pill" id="lang" aria-label="Switch to English"><span aria-hidden="true">EN</span></button>
+      <button class="pill" id="theme" aria-label="Basculer le thème sombre">
+        <svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><g><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></g></svg>
+        <svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.2 8.2 0 0 1 9.5 4a8.3 8.3 0 1 0 10.5 10.5z"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero hero--proj">
+  <div class="wrap">
+    <p class="hero__kicker">Développement produit · IA · Compétence transversale</p>
+    <h1 class="proj__h1">Barcelona CycleGuide — une application vocale qui guide, prévient et raconte</h1>
+    <p class="hero__role">Conçue, codée, testée et livrée en 42 heures pour un opérateur de tours à vélo électrique</p>
+
+    <ul class="meta">
+      <li><b>Cadre</b><span>Projet personnel, livré au fondateur de Pink Ducks</span></li>
+      <li><b>Période</b><span>1er au 6 juin 2026, 42 heures réparties en 20 phases documentées</span></li>
+      <li><b>Nature</b><span>Travail individuel, en binôme avec un assistant de développement IA</span></li>
+      <li><b>État</b><span>Prototype fonctionnel, testé sur appareils iOS et Android réels</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap prose prose--proj">
+
+    <div class="callout">
+      <p>Cette page ne parle pas de qualité ni de sécurité. Elle est ici parce qu'un référent QSE passe sa vie dans les tableaux de bord, les remontées de terrain et les systèmes d'alerte. Ce projet montre que je sais en construire un, pas seulement m'en servir.</p>
+    </div>
+
+    <h2>Le problème</h2>
+    <p>Un guide accompagne un groupe à vélo dans Barcelone. Il raconte l'histoire des lieux, prévient des zones interdites aux vélos, répond aux questions. Mais il ne peut le faire que pour un groupe à la fois, dans une seule langue, et seulement pendant la durée du tour.</p>
+    <p>La question était de savoir si une partie de cette valeur pouvait continuer d'exister quand le guide n'est plus là, sans dégrader l'expérience ni exiger du cycliste qu'il s'arrête pour consulter un écran.</p>
+
+    <h2>Ce que fait l'application</h2>
+    <p>Le principe directeur tient en une phrase : le cycliste ne doit jamais avoir à s'arrêter, baisser les yeux, ni chercher. Tout se déclenche seul ou se pilote à la voix.</p>
+    <ul class="deliv">
+      <li><b>Géorepérage proactif</b><span>Un cercle invisible d'environ 40 mètres entoure chaque lieu. Dès que le cycliste y entre, la fiche s'ouvre et l'histoire du lieu est racontée à voix haute. Il n'a rien demandé.</span></li>
+      <li><b>Avertissements réglementaires</b><span>Barcelone a des règles strictes et des amendes réelles. L'application prévient avant l'infraction, pas après. C'est de la prévention, au sens littéral.</span></li>
+      <li><b>Assistant vocal multilingue</b><span>Une IA conversationnelle qui répond aux questions parlées, en tenant compte de la position du cycliste, dans six langues.</span></li>
+      <li><b>Navigation virage par virage</b><span>Manœuvres annoncées à la voix, recalcul automatique en cas de sortie de trajet.</span></li>
+      <li><b>Recherche de stationnement</b><span>Données ouvertes Bicing et Bicibox de la ville, en temps réel.</span></li>
+      <li><b>Progression et points</b><span>Une couche de jeu qui encourage à découvrir de nouveaux lieux.</span></li>
+    </ul>
+
+    <h2>La stack technique</h2>
+    <ul class="deliv">
+      <li><b>Application</b><span>React Native, Expo SDK 54 — un seul code source pour iOS et Android</span></li>
+      <li><b>Backend</b><span>Firebase sur Google Cloud : cinq collections, schéma et règles de sécurité</span></li>
+      <li><b>Géorepérage</b><span>Moteur développé sur mesure, basé sur la formule de Haversine</span></li>
+      <li><b>Intelligence artificielle</b><span>Intégration Claude, contextuelle et multilingue</span></li>
+      <li><b>Navigation</b><span>Routage OSRM, synthèse vocale des manœuvres</span></li>
+      <li><b>Distribution</b><span>EAS Build, APK Android installable</span></li>
+      <li><b>Automatisation</b><span>GitHub Actions : un générateur quotidien qui enrichit la base de lieux tout seul</span></li>
+    </ul>
+
+    <h2>Les trois décisions qui ont fait le projet</h2>
+    <p>Le développement n'a pas suivi une ligne droite, et c'est la partie la plus instructive.</p>
+    <ul class="deliv">
+      <li><b>Abandonner le no-code</b><span>Le premier prototype tournait sur FlutterFlow. Les limites du palier gratuit bloquaient les bibliothèques GPS et IA, c'est-à-dire précisément le cœur du produit. J'ai arrêté au bout d'une phase et demie plutôt que de contourner.</span></li>
+      <li><b>Tout reconstruire</b><span>Bascule complète vers React Native et Expo. Une base gratuite, extensible, et qui ne poserait plus de plafond.</span></li>
+      <li><b>Écrire mon propre moteur de géorepérage</b><span>Le service Radar.io refusait les inscriptions avec une adresse personnelle. Plutôt que de supprimer la fonctionnalité qui fait tout l'intérêt de l'application, j'ai implémenté la détection de proximité moi-même, avec la formule de Haversine. Trois heures de travail, et la dépendance disparaît.</span></li>
+    </ul>
+
+    <h2>Ce qui a réellement été testé</h2>
+    <p>Sur iPhone et Android réels, via un serveur de développement. Le pipeline vocal a été débogué avec un calque de diagnostic affiché à l'écran qui traçait chaque étape, de l'enregistrement à la reconnaissance puis à la synthèse. Le géorepérage a été testé dans Barcelone et hors de Barcelone. Les six langues ont été vérifiées à l'interface et à la voix. Les notifications ont été testées au premier plan et en arrière-plan.</p>
+
+    <div class="callout">
+      <p>C'est un <b>prototype fonctionnel en cours de test</b>, pas un produit en production. Le document de reprise remis au fondateur liste lui-même les limites actuelles, sans les enjoliver. Je le présente comme tel.</p>
+    </div>
+
+    <h2>Pourquoi cette page existe sur un portfolio QSE</h2>
+    <p>Parce qu'elle répond à une question qu'on ne pose jamais directement en entretien mais qui compte : que fait cette personne quand elle rencontre un obstacle technique et que personne ne peut l'aider.</p>
+    <p>La réponse est ici, documentée phase par phase. Une plateforme atteint sa limite, je change de plateforme. Un service refuse mon inscription, j'écris la fonction moi-même. Et à la fin je rédige un document que le dirigeant, non technique, peut lire et comprendre — parce qu'un livrable que personne ne peut reprendre n'est pas un livrable.</p>
+
+    <p class="backlink"><a href="pink-ducks.html">→ Le mémoire de stratégie Pink Ducks, dont ce projet est issu</a></p>
+    <p class="backlink"><a href="../#projects">← Retour à toutes les réalisations</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p>© <span id="yr">2026</span> Harold Kamgang</p>
+    <p>Site construit à la main — sans pisteur, sans cookie.</p>
+  </div>
+</footer>
+
+<script src="../assets/js/i18n.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
