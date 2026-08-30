@@ -149,3 +149,67 @@
   }
   #progress{ transition:none; }
 }
+
+/* ── 11. Images de projet ─────────────────────────────────────
+   Ajouté le 30/08/2026 : captures d'app, graphiques et schémas
+   extraits des documents d'Harold, integrés aux pages projet.
+   Même palette que le site (navy / teal / rose), bords arrondis
+   discrets, poids maîtrisé côté fichiers (voir assets/img/projets/).
+   ─────────────────────────────────────────────────────────────── */
+
+.proj-fig,
+.proj-gallery figure{
+  margin:1.6rem 0;
+  padding:0;
+}
+
+.proj-fig img,
+.proj-gallery img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:var(--r);
+  border:1px solid var(--line);
+  box-shadow:var(--sh);
+  background:var(--surface);
+}
+
+.proj-fig figcaption,
+.proj-gallery figcaption{
+  margin-top:.6rem;
+  font-family:var(--f-body);
+  font-size:.88rem;
+  line-height:1.45;
+  color:var(--txt-2);
+}
+
+/* Grille pour les captures d'application, au format portrait :
+   côte à côte plutôt qu'étalées en pleine largeur. */
+.proj-gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(168px, 1fr));
+  gap:1.3rem 1rem;
+  margin:1.8rem 0 2rem;
+}
+.proj-gallery figure{ margin:0; }
+.proj-gallery img{ aspect-ratio:9/19.5; object-fit:cover; }
+
+/* Les vignettes s'ouvrent en plein format dans un nouvel onglet :
+   pas de halo de lien texte sur une image. */
+.proj-fig a, .proj-gallery a{
+  display:block;
+  background-image:none !important;
+}
+.proj-fig a:hover img,
+.proj-gallery a:hover img{
+  border-color:var(--neon);
+  box-shadow:0 0 0 1px var(--neon-soft), 0 10px 28px -12px rgba(0,0,0,.35);
+}
+.proj-fig a img,
+.proj-gallery a img{
+  transition:border-color .35s var(--ease-out), box-shadow .35s var(--ease-out);
+}
+
+@media (max-width: 480px){
+  .proj-gallery{ grid-template-columns:repeat(2, 1fr); }
+}
