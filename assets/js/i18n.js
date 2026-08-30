@@ -17,9 +17,18 @@
   var nodes = Array.prototype.slice.call(document.querySelectorAll("[data-i18n]"));
   nodes.forEach(function (el) { base[el.dataset.i18n] = el.innerHTML; });
 
-  base["meta.title"] = document.title;
+  // Plusieurs pages projet partagent un seul dictionnaire en.json : une clé
+  // "meta.title" non préfixée serait écrasée par la dernière page qui l'a
+  // écrite. Chaque page projet déclare donc son propre préfixe via
+  // <html data-i18n-prefix="k."> ; les pages qui n'en déclarent pas (index)
+  // gardent l'ancien comportement, sans rien casser.
+  var metaPrefix = document.documentElement.dataset.i18nPrefix || "";
+  var titleKey = metaPrefix + "meta.title";
+  var descKey = metaPrefix + "meta.desc";
+
+  base[titleKey] = document.title;
   var metaDesc = document.querySelector('meta[name="description"]');
-  base["meta.desc"] = metaDesc ? metaDesc.content : "";
+  base[descKey] = metaDesc ? metaDesc.content : "";
 
   function paint(lang) {
     var d = dict[lang];
@@ -30,8 +39,8 @@
       if (typeof v === "string") el.innerHTML = v;
     });
 
-    if (d["meta.title"]) document.title = d["meta.title"];
-    if (metaDesc && d["meta.desc"]) metaDesc.content = d["meta.desc"];
+    if (d[titleKey]) document.title = d[titleKey];
+    if (metaDesc && d[descKey]) metaDesc.content = d[descKey];
 
     document.documentElement.lang = lang;
     current = lang;
