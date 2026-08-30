@@ -1,0 +1,151 @@
+/* ═══════════════════════════════════════════════════════════════
+   motion.css — animations, relief et effets néon
+   Ajouté le 29/08/2026. Feuille séparée : style.css n'est pas touché,
+   donc retirer une seule ligne du <head> annule tout ceci.
+
+   Règle tenue partout : « prefers-reduced-motion: reduce » désactive
+   chaque animation. Un site qui bouge sans qu'on puisse l'arrêter
+   n'est pas un site professionnel, c'est un site fatigant.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root{
+  --neon:#1A6E8E;
+  --neon-soft:rgba(26,110,142,.38);
+  --neon-hot:rgba(26,110,142,.55);
+  --rose:#A97380;
+  --ease-out:cubic-bezier(.22,.61,.36,1);
+}
+
+/* ── 1. Apparition au défilement ─────────────────────────────── */
+[data-rise]{
+  opacity:0;
+  transform:translateY(26px);
+  transition:opacity .7s var(--ease-out), transform .7s var(--ease-out);
+  will-change:opacity, transform;
+}
+[data-rise].is-in{ opacity:1; transform:none; }
+/* décalage en cascade : les éléments d'une même grille arrivent l'un après l'autre */
+[data-rise][style*="--d"]{ transition-delay:var(--d); }
+
+/* ── 2. Cartes : relief au survol + halo qui suit la souris ──── */
+.card{
+  position:relative;
+  isolation:isolate;
+  transition:transform .45s var(--ease-out), box-shadow .45s var(--ease-out),
+             border-color .45s var(--ease-out);
+}
+.card::before{
+  content:"";
+  position:absolute; inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  z-index:-1;
+  opacity:0;
+  transition:opacity .4s ease;
+  background:radial-gradient(
+    420px circle at var(--mx,50%) var(--my,50%),
+    var(--neon-soft), transparent 62%);
+}
+.card:hover{
+  transform:translateY(-6px);
+  border-color:var(--neon);
+  box-shadow:0 18px 44px -18px rgba(0,0,0,.5),
+             0 0 0 1px var(--neon-soft),
+             0 0 34px -8px var(--neon-soft);
+}
+.card:hover::before{ opacity:1; }
+
+/* le lien de la carte glisse vers la droite au survol */
+.card__more{
+  display:inline-block;
+  transition:transform .35s var(--ease-out), color .35s ease;
+}
+.card:hover .card__more{ transform:translateX(6px); }
+
+/* ── 3. Timeline : le point s'allume au survol ───────────────── */
+.tl__i{ transition:transform .4s var(--ease-out); }
+.tl__i::before,
+.tl__i > :first-child::before{
+  transition:box-shadow .4s ease, background-color .4s ease, transform .4s var(--ease-out);
+}
+.tl__i:hover{ transform:translateX(5px); }
+.tl__i:hover::before,
+.tl__i:hover > :first-child::before{
+  background:var(--neon);
+  box-shadow:0 0 0 4px rgba(26,110,142,.22), 0 0 16px 2px var(--neon-hot);
+  transform:scale(1.25);
+}
+.tl__i .tl__r{ transition:color .35s ease; }
+.tl__i:hover .tl__r{ color:var(--neon); }
+
+/* ── 4. Compétences : même logique, plus discrète ────────────── */
+.sk{
+  transition:transform .4s var(--ease-out), box-shadow .4s var(--ease-out),
+             border-color .4s var(--ease-out);
+}
+.sk:hover{
+  transform:translateY(-4px);
+  border-color:var(--neon);
+  box-shadow:0 0 26px -10px var(--neon-soft);
+}
+
+/* ── 5. Boutons : lueur au survol, léger enfoncement au clic ─── */
+.btn, .pill{
+  transition:transform .25s var(--ease-out), box-shadow .3s ease,
+             background-color .3s ease, color .3s ease;
+}
+.btn:hover, .pill:hover{
+  transform:translateY(-2px);
+  box-shadow:0 0 22px -6px var(--neon-hot);
+}
+.btn:active, .pill:active{ transform:translateY(0) scale(.98); }
+
+/* ── 6. Liens de texte : soulignement qui se déploie ─────────── */
+.prose a:not(.btn):not(.card__more){
+  position:relative;
+  text-decoration:none;
+  background-image:linear-gradient(var(--neon), var(--neon));
+  background-size:0% 1.5px;
+  background-position:0 100%;
+  background-repeat:no-repeat;
+  transition:background-size .35s var(--ease-out);
+}
+.prose a:not(.btn):not(.card__more):hover{ background-size:100% 1.5px; }
+
+/* ── 7. Titres de section : le numéro s'allume à l'arrivée ───── */
+.sec__n{ transition:color .5s ease, text-shadow .5s ease; }
+.sec__t.is-in .sec__n{
+  color:var(--neon);
+  text-shadow:0 0 18px var(--neon-soft);
+}
+
+/* ── 8. Barre de progression de lecture, en haut ─────────────── */
+#progress{
+  position:fixed; top:0; left:0; height:2px; width:0;
+  background:linear-gradient(90deg, var(--neon), var(--rose));
+  z-index:9999;
+  transition:width .1s linear;
+  box-shadow:0 0 12px var(--neon-hot);
+}
+
+/* ── 9. Encadrés : liseré qui pulse doucement ────────────────── */
+.callout{
+  position:relative;
+  transition:box-shadow .45s ease, transform .45s var(--ease-out);
+}
+.callout:hover{
+  transform:translateX(4px);
+  box-shadow:-3px 0 22px -8px var(--neon-hot);
+}
+
+/* ── 10. Respect absolu du réglage système ───────────────────── */
+@media (prefers-reduced-motion: reduce){
+  [data-rise]{ opacity:1 !important; transform:none !important; transition:none !important; }
+  .card, .card__more, .tl__i, .sk, .btn, .pill, .callout, .prose a{
+    transition:none !important;
+  }
+  .card:hover, .tl__i:hover, .sk:hover, .btn:hover, .pill:hover, .callout:hover{
+    transform:none !important;
+  }
+  #progress{ transition:none; }
+}
