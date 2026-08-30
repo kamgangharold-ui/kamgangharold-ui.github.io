@@ -26,13 +26,13 @@
 </head>
 
 <body>
-<a class="skip" href="#main">Aller au contenu principal</a>
+<a class="skip" href="#main" data-i18n="a11y.skip">Aller au contenu principal</a>
 
 <header class="site-header">
   <nav class="nav" aria-label="Navigation principale">
     <a class="nav__brand" href="../"><span>Harold</span> Kamgang</a>
     <ul class="nav__menu nav__menu--sub" id="navmenu">
-      <li><a href="../#projects">← Toutes les réalisations</a></li>
+      <li><a href="../#projects" data-i18n="nav.back">← Toutes les réalisations</a></li>
     </ul>
     <div class="nav__tools">
       <button class="pill" id="lang" aria-label="Switch to English"><span aria-hidden="true">EN</span></button>
@@ -48,15 +48,15 @@
 
 <section class="hero hero--proj">
   <div class="wrap">
-    <p class="hero__kicker">Environnement · Analyse de données · Mémoire d'ingénieur</p>
-    <h1 class="proj__h1">Kribi — réduire les rejets d'eaux huileuses d'une centrale à gaz</h1>
-    <p class="hero__role">Comment 200 maintenances sur 250 ont conduit à un diagnostic chiffré, puis à un système de détection des fuites</p>
+    <p class="hero__kicker" data-i18n="k.kicker">Environnement · Analyse de données · Mémoire d'ingénieur</p>
+    <h1 class="proj__h1" data-i18n="k.title">Kribi — réduire les rejets d'eaux huileuses d'une centrale à gaz</h1>
+    <p class="hero__role" data-i18n="k.sub">Comment 200 maintenances sur 250 ont conduit à un diagnostic chiffré, puis à un système de détection des fuites</p>
 
     <ul class="meta">
-      <li><b>Cadre</b><span>Mémoire de fin d'études d'ingénieur, Saint-Jérôme Polytechnique (SJP5, génie des procédés)</span></li>
-      <li><b>Entreprise</b><span>Kribi Power Development Company, centrale thermique à gaz de 216 MW, Cameroun</span></li>
-      <li><b>Période</b><span>Février – juin 2022</span></li>
-      <li><b>Nature</b><span>Travail individuel. Tuteur académique M. Etonde Eyidi Yannick, tuteur professionnel M. Wouambo Marius, chef de quart</span></li>
+      <li><b data-i18n="k.m1.k">Cadre</b><span data-i18n="k.m1.v">Mémoire de fin d'études d'ingénieur, Saint-Jérôme Polytechnique (SJP5, génie des procédés)</span></li>
+      <li><b data-i18n="k.m2.k">Entreprise</b><span data-i18n="k.m2.v">Kribi Power Development Company, centrale thermique à gaz de 216 MW, Cameroun</span></li>
+      <li><b data-i18n="k.m3.k">Période</b><span data-i18n="k.m3.v">Février – juin 2022</span></li>
+      <li><b data-i18n="k.m4.k">Nature</b><span data-i18n="k.m4.v">Travail individuel. Tuteur académique M. Etonde Eyidi Yannick, tuteur professionnel M. Wouambo Marius, chef de quart</span></li>
     </ul>
   </div>
 </section>
@@ -64,63 +64,63 @@
 <section class="sec">
   <div class="wrap prose prose--proj">
 
-    <h2>Le problème</h2>
-    <p>La centrale de Kribi produit 216 MW à partir de treize moteurs Wartsila 50DF fonctionnant en bicarburation. Ces moteurs génèrent des eaux huileuses, un mélange d'eau et d'huile de lubrification qui doit être traité avant tout rejet dans l'environnement.</p>
-    <p>Trois signaux montaient ensemble sans que personne ait établi le lien entre eux : le volume d'eaux huileuses évacué par le prestataire, le nombre de pannes de l'unité de traitement, et la consommation d'huile de lubrification. La question posée était de réduire la production de ces effluents. La première chose à faire était de comprendre d'où ils venaient.</p>
+    <h2 data-i18n="k.h1">Le problème</h2>
+    <p data-i18n="k.p1">La centrale de Kribi produit 216 MW à partir de treize moteurs Wartsila 50DF fonctionnant en bicarburation. Ces moteurs génèrent des eaux huileuses, un mélange d'eau et d'huile de lubrification qui doit être traité avant tout rejet dans l'environnement.</p>
+    <p data-i18n="k.p2">Trois signaux montaient ensemble sans que personne ait établi le lien entre eux : le volume d'eaux huileuses évacué par le prestataire, le nombre de pannes de l'unité de traitement, et la consommation d'huile de lubrification. La question posée était de réduire la production de ces effluents. La première chose à faire était de comprendre d'où ils venaient.</p>
 
-    <h2>L'ampleur, en chiffres</h2>
+    <h2 data-i18n="k.h2">L'ampleur, en chiffres</h2>
     <div class="callout">
-      <p>En 2021, <b>200 des 250 maintenances</b> réalisées en salle machine étaient dues à des fuites d'huile. Soit 80 % de l'activité de maintenance consacrée à un seul type de défaillance.</p>
+      <p data-i18n="k.call1">En 2021, <b>200 des 250 maintenances</b> réalisées en salle machine étaient dues à des fuites d'huile. Soit 80 % de l'activité de maintenance consacrée à un seul type de défaillance.</p>
     </div>
 
-    <h3>Volume d'eaux huileuses évacué, en litres</h3>
+    <h3 data-i18n="k.h3">Volume d'eaux huileuses évacué, en litres</h3>
     <ul class="deliv">
-      <li><b>2018</b><span>1 005 000</span></li>
-      <li><b>2019</b><span>532 500</span></li>
-      <li><b>2020</b><span>659 000</span></li>
-      <li><b>2021</b><span>1 316 000 — un doublement en deux ans</span></li>
-      <li><b>Janvier à avril 2022</b><span>262 000</span></li>
+      <li><b data-i18n="k.v1.k">2018</b><span data-i18n="k.v1.v">1 005 000</span></li>
+      <li><b data-i18n="k.v2.k">2019</b><span data-i18n="k.v2.v">532 500</span></li>
+      <li><b data-i18n="k.v3.k">2020</b><span data-i18n="k.v3.v">659 000</span></li>
+      <li><b data-i18n="k.v4.k">2021</b><span data-i18n="k.v4.v">1 316 000 — un doublement en deux ans</span></li>
+      <li><b data-i18n="k.v5.k">Janvier à avril 2022</b><span data-i18n="k.v5.v">262 000</span></li>
     </ul>
 
-    <h3>Maintenances dues aux fuites d'huile en salle machine</h3>
+    <h3 data-i18n="k.h4">Maintenances dues aux fuites d'huile en salle machine</h3>
     <ul class="deliv">
-      <li><b>2019, novembre et décembre</b><span>11 sur 30, soit 37 %</span></li>
-      <li><b>2020</b><span>112 sur 150, soit 75 %</span></li>
-      <li><b>2021</b><span>200 sur 250, soit 80 %</span></li>
+      <li><b data-i18n="k.mn1.k">2019, novembre et décembre</b><span data-i18n="k.mn1.v">11 sur 30, soit 37 %</span></li>
+      <li><b data-i18n="k.mn2.k">2020</b><span data-i18n="k.mn2.v">112 sur 150, soit 75 %</span></li>
+      <li><b data-i18n="k.mn3.k">2021</b><span data-i18n="k.mn3.v">200 sur 250, soit 80 %</span></li>
     </ul>
 
-    <h3>Pannes de l'unité de traitement SENITEC</h3>
-    <p>Une panne en 2019, trois en 2020, sept en 2021, sept sur les seuls premiers mois de 2022. L'installation censée traiter le problème devenait elle-même un point de défaillance.</p>
+    <h3 data-i18n="k.h5">Pannes de l'unité de traitement SENITEC</h3>
+    <p data-i18n="k.p3">Une panne en 2019, trois en 2020, sept en 2021, sept sur les seuls premiers mois de 2022. L'installation censée traiter le problème devenait elle-même un point de défaillance.</p>
 
-    <h2>La méthode</h2>
+    <h2 data-i18n="k.h6">La méthode</h2>
 
-    <h3>1. Établir les corrélations</h3>
-    <p>Plutôt que de traiter les trois signaux séparément, j'ai cherché à savoir s'ils bougeaient ensemble. Deux corrélations calculées sur les données 2019 à 2021 :</p>
+    <h3 data-i18n="k.h7">1. Établir les corrélations</h3>
+    <p data-i18n="k.p4">Plutôt que de traiter les trois signaux séparément, j'ai cherché à savoir s'ils bougeaient ensemble. Deux corrélations calculées sur les données 2019 à 2021 :</p>
     <ul class="deliv">
-      <li><b>0,92</b><span>Entre la quantité de déchets liquides produits par les treize moteurs et la consommation d'huile de lubrification.</span></li>
-      <li><b>0,98</b><span>Entre la quantité de boues récupérées et le nombre de maintenances sur l'unité de traitement.</span></li>
+      <li><b data-i18n="k.cor1.k">0,92</b><span data-i18n="k.cor1.v">Entre la quantité de déchets liquides produits par les treize moteurs et la consommation d'huile de lubrification.</span></li>
+      <li><b data-i18n="k.cor2.k">0,98</b><span data-i18n="k.cor2.v">Entre la quantité de boues récupérées et le nombre de maintenances sur l'unité de traitement.</span></li>
     </ul>
-    <p>Ces deux chiffres transforment une intuition en fait établi : la centrale ne perdait pas seulement de l'huile, elle payait cette perte trois fois, en achat d'huile, en maintenance moteur et en maintenance de l'unité de traitement.</p>
+    <p data-i18n="k.p5">Ces deux chiffres transforment une intuition en fait établi : la centrale ne perdait pas seulement de l'huile, elle payait cette perte trois fois, en achat d'huile, en maintenance moteur et en maintenance de l'unité de traitement.</p>
 
-    <h3>2. Cibler avec un diagramme de Pareto</h3>
-    <p>Une fois le lien établi, restait à savoir où l'huile s'échappait. Le principe de Pareto appliqué au relevé des interventions par équipement a fait ressortir un petit nombre de coupables :</p>
+    <h3 data-i18n="k.h8">2. Cibler avec un diagramme de Pareto</h3>
+    <p data-i18n="k.p6">Une fois le lien établi, restait à savoir où l'huile s'échappait. Le principe de Pareto appliqué au relevé des interventions par équipement a fait ressortir un petit nombre de coupables :</p>
     <div class="callout">
-      <p>Six équipements concentrent <b>76 %</b> des interventions : cache-culbuteurs, pipelines, vannes, portes de visite, pompes et arbres à cames.</p>
+      <p data-i18n="k.call2">Six équipements concentrent <b>76 %</b> des interventions : cache-culbuteurs, pipelines, vannes, portes de visite, pompes et arbres à cames.</p>
     </div>
-    <p>C'est ce qui rend une action possible. Surveiller treize moteurs entiers n'est pas réalisable ; surveiller six familles de points de fuite l'est.</p>
+    <p data-i18n="k.p7">C'est ce qui rend une action possible. Surveiller treize moteurs entiers n'est pas réalisable ; surveiller six familles de points de fuite l'est.</p>
 
-    <h3>3. Remonter aux causes avec un diagramme d'Ishikawa</h3>
-    <p>Appliqué cette fois à l'unité de traitement SENITEC, pour comprendre pourquoi elle tombait en panne de plus en plus souvent au lieu d'absorber la charge.</p>
+    <h3 data-i18n="k.h9">3. Remonter aux causes avec un diagramme d'Ishikawa</h3>
+    <p data-i18n="k.p8">Appliqué cette fois à l'unité de traitement SENITEC, pour comprendre pourquoi elle tombait en panne de plus en plus souvent au lieu d'absorber la charge.</p>
 
-    <h2>Ce que j'ai proposé</h2>
-    <p>Un <b>système de détection et de localisation des fuites d'huile par kit ultraviolet</b>, concentré sur les six familles d'équipements identifiées par le Pareto. La logique est simple : détecter une fuite au moment où elle apparaît plutôt qu'au moment où elle a rempli une cuve, et ne surveiller que ce qui casse réellement.</p>
+    <h2 data-i18n="k.h10">Ce que j'ai proposé</h2>
+    <p data-i18n="k.p9">Un <b>système de détection et de localisation des fuites d'huile par kit ultraviolet</b>, concentré sur les six familles d'équipements identifiées par le Pareto. La logique est simple : détecter une fuite au moment où elle apparaît plutôt qu'au moment où elle a rempli une cuve, et ne surveiller que ce qui casse réellement.</p>
 
-    <h2>Ce que ce travail m'a appris, et que j'utilise encore</h2>
-    <p>C'est ici que j'ai mené moi-même, pour la première fois, un Pareto et un Ishikawa de bout en bout, sur des données réelles d'exploitation. Et c'est mon seul travail entièrement centré sur le volet environnemental, celui du rejet industriel.</p>
-    <p>La séquence que j'y ai apprise est celle que j'applique depuis : mesurer avant d'agir, chercher si les signaux bougent ensemble, cibler la minorité d'équipements responsable de la majorité des défaillances, puis proposer une solution proportionnée à ce que le diagnostic a montré. Sur un poste QSE, c'est exactement la démarche attendue face à une non-conformité récurrente.</p>
+    <h2 data-i18n="k.h11">Ce que ce travail m'a appris, et que j'utilise encore</h2>
+    <p data-i18n="k.p10">C'est ici que j'ai mené moi-même, pour la première fois, un Pareto et un Ishikawa de bout en bout, sur des données réelles d'exploitation. Et c'est mon seul travail entièrement centré sur le volet environnemental, celui du rejet industriel.</p>
+    <p data-i18n="k.p11">La séquence que j'y ai apprise est celle que j'applique depuis : mesurer avant d'agir, chercher si les signaux bougent ensemble, cibler la minorité d'équipements responsable de la majorité des défaillances, puis proposer une solution proportionnée à ce que le diagnostic a montré. Sur un poste QSE, c'est exactement la démarche attendue face à une non-conformité récurrente.</p>
 
-    <p class="backlink"><a href="parcours-academique.html">→ Voir tout mon parcours d'ingénieur, projet par projet</a></p>
-    <p class="backlink"><a href="../#projects">← Retour à toutes les réalisations</a></p>
+    <p class="backlink"><a href="parcours-academique.html" data-i18n="k.back1">→ Voir tout mon parcours d'ingénieur, projet par projet</a></p>
+    <p class="backlink"><a href="../#projects" data-i18n="p.back">← Retour à toutes les réalisations</a></p>
   </div>
 </section>
 
@@ -129,7 +129,7 @@
 <footer class="foot">
   <div class="wrap foot__in">
     <p>© <span id="yr">2026</span> Harold Kamgang</p>
-    <p>Site construit à la main — sans pisteur, sans cookie.</p>
+    <p data-i18n="foot.note">Site construit à la main — sans pisteur, sans cookie.</p>
   </div>
 </footer>
 

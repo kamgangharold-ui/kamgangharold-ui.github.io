@@ -26,13 +26,13 @@
 </head>
 
 <body>
-<a class="skip" href="#main">Aller au contenu principal</a>
+<a class="skip" href="#main" data-i18n="a11y.skip">Aller au contenu principal</a>
 
 <header class="site-header">
   <nav class="nav" aria-label="Navigation principale">
     <a class="nav__brand" href="../"><span>Harold</span> Kamgang</a>
     <ul class="nav__menu nav__menu--sub" id="navmenu">
-      <li><a href="../#projects">← Toutes les réalisations</a></li>
+      <li><a href="../#projects" data-i18n="nav.back">← Toutes les réalisations</a></li>
     </ul>
     <div class="nav__tools">
       <button class="pill" id="lang" aria-label="Switch to English"><span aria-hidden="true">EN</span></button>
@@ -48,15 +48,15 @@
 
 <section class="hero hero--proj">
   <div class="wrap">
-    <p class="hero__kicker">Développement produit · IA · Compétence transversale</p>
-    <h1 class="proj__h1">Barcelona CycleGuide — une application vocale qui guide, prévient et raconte</h1>
-    <p class="hero__role">Conçue, codée, testée et livrée en 42 heures pour un opérateur de tours à vélo électrique</p>
+    <p class="hero__kicker" data-i18n="bc.kicker">Développement produit · IA · Compétence transversale</p>
+    <h1 class="proj__h1" data-i18n="bc.title">Barcelona CycleGuide — une application vocale qui guide, prévient et raconte</h1>
+    <p class="hero__role" data-i18n="bc.sub">Conçue, codée, testée et livrée en 42 heures pour un opérateur de tours à vélo électrique</p>
 
     <ul class="meta">
-      <li><b>Cadre</b><span>Projet personnel, livré au fondateur de Pink Ducks</span></li>
-      <li><b>Période</b><span>1er au 6 juin 2026, 42 heures réparties en 20 phases documentées</span></li>
-      <li><b>Nature</b><span>Travail individuel, en binôme avec un assistant de développement IA</span></li>
-      <li><b>État</b><span>Prototype fonctionnel, testé sur appareils iOS et Android réels</span></li>
+      <li><b data-i18n="bc.m1.k">Cadre</b><span data-i18n="bc.m1.v">Projet personnel, livré au fondateur de Pink Ducks</span></li>
+      <li><b data-i18n="bc.m2.k">Période</b><span data-i18n="bc.m2.v">1er au 6 juin 2026, 42 heures réparties en 20 phases documentées</span></li>
+      <li><b data-i18n="bc.m3.k">Nature</b><span data-i18n="bc.m3.v">Travail individuel, en binôme avec un assistant de développement IA</span></li>
+      <li><b data-i18n="bc.m4.k">État</b><span data-i18n="bc.m4.v">Prototype fonctionnel, testé sur appareils iOS et Android réels</span></li>
     </ul>
   </div>
 </section>
@@ -65,56 +65,56 @@
   <div class="wrap prose prose--proj">
 
     <div class="callout">
-      <p>Cette page ne parle pas de qualité ni de sécurité. Elle est ici parce qu'un référent QSE passe sa vie dans les tableaux de bord, les remontées de terrain et les systèmes d'alerte. Ce projet montre que je sais en construire un, pas seulement m'en servir.</p>
+      <p data-i18n="bc.call1">Cette page ne parle pas de qualité ni de sécurité. Elle est ici parce qu'un référent QSE passe sa vie dans les tableaux de bord, les remontées de terrain et les systèmes d'alerte. Ce projet montre que je sais en construire un, pas seulement m'en servir.</p>
     </div>
 
-    <h2>Le problème</h2>
-    <p>Un guide accompagne un groupe à vélo dans Barcelone. Il raconte l'histoire des lieux, prévient des zones interdites aux vélos, répond aux questions. Mais il ne peut le faire que pour un groupe à la fois, dans une seule langue, et seulement pendant la durée du tour.</p>
-    <p>La question était de savoir si une partie de cette valeur pouvait continuer d'exister quand le guide n'est plus là, sans dégrader l'expérience ni exiger du cycliste qu'il s'arrête pour consulter un écran.</p>
+    <h2 data-i18n="bc.h1">Le problème</h2>
+    <p data-i18n="bc.p1">Un guide accompagne un groupe à vélo dans Barcelone. Il raconte l'histoire des lieux, prévient des zones interdites aux vélos, répond aux questions. Mais il ne peut le faire que pour un groupe à la fois, dans une seule langue, et seulement pendant la durée du tour.</p>
+    <p data-i18n="bc.p2">La question était de savoir si une partie de cette valeur pouvait continuer d'exister quand le guide n'est plus là, sans dégrader l'expérience ni exiger du cycliste qu'il s'arrête pour consulter un écran.</p>
 
-    <h2>Ce que fait l'application</h2>
-    <p>Le principe directeur tient en une phrase : le cycliste ne doit jamais avoir à s'arrêter, baisser les yeux, ni chercher. Tout se déclenche seul ou se pilote à la voix.</p>
+    <h2 data-i18n="bc.h2">Ce que fait l'application</h2>
+    <p data-i18n="bc.p3">Le principe directeur tient en une phrase : le cycliste ne doit jamais avoir à s'arrêter, baisser les yeux, ni chercher. Tout se déclenche seul ou se pilote à la voix.</p>
     <ul class="deliv">
-      <li><b>Géorepérage proactif</b><span>Un cercle invisible d'environ 40 mètres entoure chaque lieu. Dès que le cycliste y entre, la fiche s'ouvre et l'histoire du lieu est racontée à voix haute. Il n'a rien demandé.</span></li>
-      <li><b>Avertissements réglementaires</b><span>Barcelone a des règles strictes et des amendes réelles. L'application prévient avant l'infraction, pas après. C'est de la prévention, au sens littéral.</span></li>
-      <li><b>Assistant vocal multilingue</b><span>Une IA conversationnelle qui répond aux questions parlées, en tenant compte de la position du cycliste, dans six langues.</span></li>
-      <li><b>Navigation virage par virage</b><span>Manœuvres annoncées à la voix, recalcul automatique en cas de sortie de trajet.</span></li>
-      <li><b>Recherche de stationnement</b><span>Données ouvertes Bicing et Bicibox de la ville, en temps réel.</span></li>
-      <li><b>Progression et points</b><span>Une couche de jeu qui encourage à découvrir de nouveaux lieux.</span></li>
+      <li><b data-i18n="bc.d1.k">Géorepérage proactif</b><span data-i18n="bc.d1.v">Un cercle invisible d'environ 40 mètres entoure chaque lieu. Dès que le cycliste y entre, la fiche s'ouvre et l'histoire du lieu est racontée à voix haute. Il n'a rien demandé.</span></li>
+      <li><b data-i18n="bc.d2.k">Avertissements réglementaires</b><span data-i18n="bc.d2.v">Barcelone a des règles strictes et des amendes réelles. L'application prévient avant l'infraction, pas après. C'est de la prévention, au sens littéral.</span></li>
+      <li><b data-i18n="bc.d3.k">Assistant vocal multilingue</b><span data-i18n="bc.d3.v">Une IA conversationnelle qui répond aux questions parlées, en tenant compte de la position du cycliste, dans six langues.</span></li>
+      <li><b data-i18n="bc.d4.k">Navigation virage par virage</b><span data-i18n="bc.d4.v">Manœuvres annoncées à la voix, recalcul automatique en cas de sortie de trajet.</span></li>
+      <li><b data-i18n="bc.d5.k">Recherche de stationnement</b><span data-i18n="bc.d5.v">Données ouvertes Bicing et Bicibox de la ville, en temps réel.</span></li>
+      <li><b data-i18n="bc.d6.k">Progression et points</b><span data-i18n="bc.d6.v">Une couche de jeu qui encourage à découvrir de nouveaux lieux.</span></li>
     </ul>
 
-    <h2>La stack technique</h2>
+    <h2 data-i18n="bc.h3">La stack technique</h2>
     <ul class="deliv">
-      <li><b>Application</b><span>React Native, Expo SDK 54 — un seul code source pour iOS et Android</span></li>
-      <li><b>Backend</b><span>Firebase sur Google Cloud : cinq collections, schéma et règles de sécurité</span></li>
-      <li><b>Géorepérage</b><span>Moteur développé sur mesure, basé sur la formule de Haversine</span></li>
-      <li><b>Intelligence artificielle</b><span>Intégration Claude, contextuelle et multilingue</span></li>
-      <li><b>Navigation</b><span>Routage OSRM, synthèse vocale des manœuvres</span></li>
-      <li><b>Distribution</b><span>EAS Build, APK Android installable</span></li>
-      <li><b>Automatisation</b><span>GitHub Actions : un générateur quotidien qui enrichit la base de lieux tout seul</span></li>
+      <li><b data-i18n="bc.t1.k">Application</b><span data-i18n="bc.t1.v">React Native, Expo SDK 54 — un seul code source pour iOS et Android</span></li>
+      <li><b data-i18n="bc.t2.k">Backend</b><span data-i18n="bc.t2.v">Firebase sur Google Cloud : cinq collections, schéma et règles de sécurité</span></li>
+      <li><b data-i18n="bc.t3.k">Géorepérage</b><span data-i18n="bc.t3.v">Moteur développé sur mesure, basé sur la formule de Haversine</span></li>
+      <li><b data-i18n="bc.t4.k">Intelligence artificielle</b><span data-i18n="bc.t4.v">Intégration Claude, contextuelle et multilingue</span></li>
+      <li><b data-i18n="bc.t5.k">Navigation</b><span data-i18n="bc.t5.v">Routage OSRM, synthèse vocale des manœuvres</span></li>
+      <li><b data-i18n="bc.t6.k">Distribution</b><span data-i18n="bc.t6.v">EAS Build, APK Android installable</span></li>
+      <li><b data-i18n="bc.t7.k">Automatisation</b><span data-i18n="bc.t7.v">GitHub Actions : un générateur quotidien qui enrichit la base de lieux tout seul</span></li>
     </ul>
 
-    <h2>Les trois décisions qui ont fait le projet</h2>
-    <p>Le développement n'a pas suivi une ligne droite, et c'est la partie la plus instructive.</p>
+    <h2 data-i18n="bc.h4">Les trois décisions qui ont fait le projet</h2>
+    <p data-i18n="bc.p4">Le développement n'a pas suivi une ligne droite, et c'est la partie la plus instructive.</p>
     <ul class="deliv">
-      <li><b>Abandonner le no-code</b><span>Le premier prototype tournait sur FlutterFlow. Les limites du palier gratuit bloquaient les bibliothèques GPS et IA, c'est-à-dire précisément le cœur du produit. J'ai arrêté au bout d'une phase et demie plutôt que de contourner.</span></li>
-      <li><b>Tout reconstruire</b><span>Bascule complète vers React Native et Expo. Une base gratuite, extensible, et qui ne poserait plus de plafond.</span></li>
-      <li><b>Écrire mon propre moteur de géorepérage</b><span>Le service Radar.io refusait les inscriptions avec une adresse personnelle. Plutôt que de supprimer la fonctionnalité qui fait tout l'intérêt de l'application, j'ai implémenté la détection de proximité moi-même, avec la formule de Haversine. Trois heures de travail, et la dépendance disparaît.</span></li>
+      <li><b data-i18n="bc.dec1.k">Abandonner le no-code</b><span data-i18n="bc.dec1.v">Le premier prototype tournait sur FlutterFlow. Les limites du palier gratuit bloquaient les bibliothèques GPS et IA, c'est-à-dire précisément le cœur du produit. J'ai arrêté au bout d'une phase et demie plutôt que de contourner.</span></li>
+      <li><b data-i18n="bc.dec2.k">Tout reconstruire</b><span data-i18n="bc.dec2.v">Bascule complète vers React Native et Expo. Une base gratuite, extensible, et qui ne poserait plus de plafond.</span></li>
+      <li><b data-i18n="bc.dec3.k">Écrire mon propre moteur de géorepérage</b><span data-i18n="bc.dec3.v">Le service Radar.io refusait les inscriptions avec une adresse personnelle. Plutôt que de supprimer la fonctionnalité qui fait tout l'intérêt de l'application, j'ai implémenté la détection de proximité moi-même, avec la formule de Haversine. Trois heures de travail, et la dépendance disparaît.</span></li>
     </ul>
 
-    <h2>Ce qui a réellement été testé</h2>
-    <p>Sur iPhone et Android réels, via un serveur de développement. Le pipeline vocal a été débogué avec un calque de diagnostic affiché à l'écran qui traçait chaque étape, de l'enregistrement à la reconnaissance puis à la synthèse. Le géorepérage a été testé dans Barcelone et hors de Barcelone. Les six langues ont été vérifiées à l'interface et à la voix. Les notifications ont été testées au premier plan et en arrière-plan.</p>
+    <h2 data-i18n="bc.h5">Ce qui a réellement été testé</h2>
+    <p data-i18n="bc.p5">Sur iPhone et Android réels, via un serveur de développement. Le pipeline vocal a été débogué avec un calque de diagnostic affiché à l'écran qui traçait chaque étape, de l'enregistrement à la reconnaissance puis à la synthèse. Le géorepérage a été testé dans Barcelone et hors de Barcelone. Les six langues ont été vérifiées à l'interface et à la voix. Les notifications ont été testées au premier plan et en arrière-plan.</p>
 
     <div class="callout">
-      <p>C'est un <b>prototype fonctionnel en cours de test</b>, pas un produit en production. Le document de reprise remis au fondateur liste lui-même les limites actuelles, sans les enjoliver. Je le présente comme tel.</p>
+      <p data-i18n="bc.call2">C'est un <b>prototype fonctionnel en cours de test</b>, pas un produit en production. Le document de reprise remis au fondateur liste lui-même les limites actuelles, sans les enjoliver. Je le présente comme tel.</p>
     </div>
 
-    <h2>Pourquoi cette page existe sur un portfolio QSE</h2>
-    <p>Parce qu'elle répond à une question qu'on ne pose jamais directement en entretien mais qui compte : que fait cette personne quand elle rencontre un obstacle technique et que personne ne peut l'aider.</p>
-    <p>La réponse est ici, documentée phase par phase. Une plateforme atteint sa limite, je change de plateforme. Un service refuse mon inscription, j'écris la fonction moi-même. Et à la fin je rédige un document que le dirigeant, non technique, peut lire et comprendre — parce qu'un livrable que personne ne peut reprendre n'est pas un livrable.</p>
+    <h2 data-i18n="bc.h6">Pourquoi cette page existe sur un portfolio QSE</h2>
+    <p data-i18n="bc.p6">Parce qu'elle répond à une question qu'on ne pose jamais directement en entretien mais qui compte : que fait cette personne quand elle rencontre un obstacle technique et que personne ne peut l'aider.</p>
+    <p data-i18n="bc.p7">La réponse est ici, documentée phase par phase. Une plateforme atteint sa limite, je change de plateforme. Un service refuse mon inscription, j'écris la fonction moi-même. Et à la fin je rédige un document que le dirigeant, non technique, peut lire et comprendre — parce qu'un livrable que personne ne peut reprendre n'est pas un livrable.</p>
 
-    <p class="backlink"><a href="pink-ducks.html">→ Le mémoire de stratégie Pink Ducks, dont ce projet est issu</a></p>
-    <p class="backlink"><a href="../#projects">← Retour à toutes les réalisations</a></p>
+    <p class="backlink"><a href="pink-ducks.html" data-i18n="bc.link1">→ Le mémoire de stratégie Pink Ducks, dont ce projet est issu</a></p>
+    <p class="backlink"><a href="../#projects" data-i18n="p.back">← Retour à toutes les réalisations</a></p>
   </div>
 </section>
 
@@ -123,7 +123,7 @@
 <footer class="foot">
   <div class="wrap foot__in">
     <p>© <span id="yr">2026</span> Harold Kamgang</p>
-    <p>Site construit à la main — sans pisteur, sans cookie.</p>
+    <p data-i18n="foot.note">Site construit à la main — sans pisteur, sans cookie.</p>
   </div>
 </footer>
 

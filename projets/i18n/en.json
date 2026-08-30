@@ -57,5 +57,192 @@
   "p.p7": "This is not a quality project, and I do not present it as one. What it demonstrates lies elsewhere: building a weighted criteria framework and sticking to it, going out to verify an assumption instead of assuming it, handling a gap by rebuilding the approach rather than working around it, standardising a documentation set, and defining success thresholds before launching. Those are exactly the reflexes of a continuous improvement approach.",
 
   "p.back": "← Back to all achievements",
-  "foot.note": "Hand-built site — no trackers, no cookies."
+  "foot.note": "Hand-built site — no trackers, no cookies.",
+
+  "k.kicker": "Environment · Data analysis · Engineering thesis",
+  "k.title": "Kribi — reducing oily water discharge from a gas power plant",
+  "k.sub": "How 200 of 250 maintenance interventions led to a data-driven diagnosis, then a leak detection system",
+
+  "k.m1.k": "Setting",
+  "k.m1.v": "Final-year engineering thesis, Saint-Jérôme Polytechnique (SJP5, process engineering)",
+  "k.m2.k": "Company",
+  "k.m2.v": "Kribi Power Development Company, a 216 MW gas-fired power plant, Cameroon",
+  "k.m3.k": "Period",
+  "k.m3.v": "February – June 2022",
+  "k.m4.k": "Nature",
+  "k.m4.v": "Individual work. Academic supervisor Mr. Etonde Eyidi Yannick, professional supervisor Mr. Wouambo Marius, shift supervisor",
+
+  "k.h1": "The problem",
+  "k.p1": "The Kribi plant produces 216 MW from thirteen dual-fuel Wärtsilä 50DF engines. These engines generate oily water, a mix of water and lubricating oil that must be treated before any discharge into the environment.",
+  "k.p2": "Three signals were rising together, and no one had linked them: the volume of oily water removed by the contractor, the number of treatment-unit breakdowns, and lubricating oil consumption. The brief was to reduce the production of these effluents. The first step was understanding where they came from.",
+
+  "k.h2": "The scale, in numbers",
+  "k.call1": "In 2021, <b>200 of the 250 maintenance interventions</b> carried out in the engine room were due to oil leaks — 80% of maintenance activity spent on a single type of failure.",
+
+  "k.h3": "Oily water discharged, in litres",
+  "k.v1.k": "2018",
+  "k.v1.v": "1,005,000",
+  "k.v2.k": "2019",
+  "k.v2.v": "532,500",
+  "k.v3.k": "2020",
+  "k.v3.v": "659,000",
+  "k.v4.k": "2021",
+  "k.v4.v": "1,316,000 — a doubling in two years",
+  "k.v5.k": "January to April 2022",
+  "k.v5.v": "262,000",
+
+  "k.h4": "Maintenance interventions caused by oil leaks in the engine room",
+  "k.mn1.k": "2019, November and December",
+  "k.mn1.v": "11 of 30, or 37%",
+  "k.mn2.k": "2020",
+  "k.mn2.v": "112 of 150, or 75%",
+  "k.mn3.k": "2021",
+  "k.mn3.v": "200 of 250, or 80%",
+
+  "k.h5": "Breakdowns of the SENITEC treatment unit",
+  "k.p3": "One breakdown in 2019, three in 2020, seven in 2021, and seven in the first months of 2022 alone. The unit meant to solve the problem was becoming a failure point in itself.",
+
+  "k.h6": "The method",
+  "k.h7": "1. Establishing the correlations",
+  "k.p4": "Rather than treating the three signals separately, I looked at whether they moved together. Two correlations calculated on 2019–2021 data:",
+  "k.cor1.k": "0.92",
+  "k.cor1.v": "Between the volume of liquid waste produced by the thirteen engines and lubricating oil consumption.",
+  "k.cor2.k": "0.98",
+  "k.cor2.v": "Between the volume of sludge recovered and the number of maintenance interventions on the treatment unit.",
+  "k.p5": "Those two figures turn a hunch into an established fact: the plant was not just losing oil, it was paying for that loss three times over — in oil purchases, in engine maintenance, and in treatment-unit maintenance.",
+
+  "k.h8": "2. Targeting with a Pareto chart",
+  "k.p6": "Once the link was established, the question was where the oil was escaping from. Applying the Pareto principle to the log of interventions by equipment brought out a small number of culprits:",
+  "k.call2": "Six pieces of equipment account for <b>76%</b> of interventions: rocker arm covers, pipelines, valves, inspection covers, pumps, and camshafts.",
+  "k.p7": "That is what makes action possible. Monitoring thirteen entire engines is not feasible; monitoring six families of leak points is.",
+
+  "k.h9": "3. Tracing the causes with an Ishikawa diagram",
+  "k.p8": "Applied this time to the SENITEC treatment unit, to understand why it was breaking down more and more often instead of absorbing the load.",
+
+  "k.h10": "What I proposed",
+  "k.p9": "An <b>ultraviolet-based oil leak detection and location system</b>, focused on the six equipment families identified by the Pareto analysis. The logic is simple: catch a leak the moment it appears rather than once it has filled a tank, and monitor only what actually breaks.",
+
+  "k.h11": "What this work taught me, and what I still use",
+  "k.p10": "This is where I ran a Pareto analysis and an Ishikawa diagram myself, end to end, for the first time, on real operating data. It is also my only piece of work entirely focused on the environmental side — industrial discharge.",
+  "k.p11": "The sequence I learned there is the one I have applied ever since: measure before acting, check whether signals move together, target the minority of equipment responsible for the majority of failures, then propose a solution proportionate to what the diagnosis showed. In a QSE role, that is exactly the approach expected when facing a recurring non-conformity.",
+
+  "k.back1": "→ See my full engineering path, project by project",
+
+  "pa.kicker": "Process engineering · 2017-2022 · Cameroon",
+  "pa.title": "Five years, five fieldwork projects, one common thread",
+  "pa.sub": "Food process engineering degree, Saint-Jérôme Polytechnique de Douala — 15/20, with Distinction",
+
+  "pa.m1.k": "School",
+  "pa.m1.v": "Institut Universitaire Catholique Saint-Jérôme de Douala, Saint-Jérôme Polytechnique",
+  "pa.m2.k": "Period",
+  "pa.m2.v": "2017 – 2022",
+  "pa.m3.k": "Result",
+  "pa.m3.v": "15/20, with Distinction",
+  "pa.m4.k": "Distinctive feature",
+  "pa.m4.v": "The program requires a documented fieldwork project every year, from first to fifth year",
+
+  "pa.call1": "I hadn't planned this: <b>four of my five projects deal with the same subject</b> — turning industrial waste into a resource, or preventing it from being produced at all. I only noticed this while rereading these reports, and it's what led me to QSE.",
+
+  "pa.h1": "2022 — Reducing oily water discharge from a gas power plant",
+  "pa.sk1": "SJP5 · Final-year thesis · Kribi Power Development Company",
+  "pa.p1": "A 216 MW thermal power plant, thirteen engines, and 200 of 250 maintenance interventions caused by oil leaks. I established a 0.92 correlation between sludge volume and oil consumption, used a Pareto chart to identify the six pieces of equipment responsible for 76% of leaks, analysed treatment-unit failures with an Ishikawa diagram, and proposed a targeted UV detection system.",
+  "pa.link1": "→ Read the full write-up of this thesis",
+
+  "pa.h2": "2021 — Recovering value from wood waste through pyrolysis",
+  "pa.sk2": "SJP4 · Supervised project · Paired with Vannick Baombé",
+  "pa.p2": "Wood waste accounts for around 27% of Cameroon's hazardous waste stream — close to 200,000 m³ sent to landfill each year. We studied slow pyrolysis to convert it into biochar and bio-oil: examining the kinetic constants of the thermal decomposition of wood and its constituents, and designing the geometry of a two-part reactor, furnace and feed chamber.",
+  "pa.p3": "The most interesting part was not the conversion itself but its downside: pyrolysis releases harmful gases. We built their treatment into the project rather than leaving it out of scope. The project was run end to end, with objectives, milestones, a schedule and a budget.",
+
+  "pa.h3": "2020 — Composting waste from a coffee roasting plant",
+  "pa.sk3": "SJP3 · Internship report · Brûlerie Moderne",
+  "pa.p4": "A coffee roasting plant produces coffee chaff — separated from the beans during roasting — and wood shavings. The company was simply discarding them. I quantified the unrecovered stream at <b>2,794 kg per year</b>, then ran an actual composting trial at the Institute's microbiology lab: six containers, daily temperature monitoring over thirteen days, with the heat released indicating microbial activity.",
+  "pa.p5": "Results were compared against a reference compost produced in Côte d'Ivoire, followed by a proposed small-scale process with its own economic case: <b>30,000 FCFA of margin per tonne of fertiliser sold</b>. It was my first piece of work where a technical solution is costed out in value for the business.",
+
+  "pa.h4": "2019 — Sesame oil and a natural pesticide based on NKUI spices",
+  "pa.sk4": "SJP2 · Practical coursework · February 2019",
+  "pa.p6": "Producing sesame oil, and <b>assisting on the manufacture</b> of a natural pesticide based on nkui spices — a Cameroonian sauce whose ingredients include African pepper, <i>Zanthoxylum xanthoxyloides</i>, known for its insecticidal properties.",
+  "pa.p7": "I specify “assisting” because that is exactly what it was: I took part in this work, I did not lead it.",
+
+  "pa.h5": "2018 — First immersion in a thermal power plant",
+  "pa.sk5": "SJP1 · Internship report · Dibamba Power Development Company",
+  "pa.p8": "Joined the operations department on a shift rotation: inspection rounds of the facilities, handovers between shift teams, writing daily production reports, Saturday checks, safety verifications, and studying the plant's process flow diagrams.",
+  "pa.p9": "That is where I received my first formal safety induction, and discovered what an industrial safety culture looks like from the inside, not from a classroom.",
+
+  "pa.call2": "Four years separate my first internship from my thesis, and both took place in a thermal power plant — Dibamba, then Kribi, two sister facilities. I started and finished my studies in the same sector, without having planned it that way.",
+
+  "pa.h6": "What this sequence says about me",
+  "pa.p10": "Spice waste turned into pesticide, coffee chaff into fertiliser, wood offcuts into biochar, oily water reduced at the source. The same question comes up every time: whatever this facility is discharging — can it be avoided, or turned into something useful.",
+  "pa.p11": "That is the central question of the environmental side of a QSE approach. I did not choose it as a talking point for job applications — I discovered it while rereading five years of reports.",
+
+  "pa.link2": "→ The Kribi thesis in detail",
+
+  "bc.kicker": "Product development · AI · Transferable skill",
+  "bc.title": "Barcelona CycleGuide — a voice app that guides, warns, and tells the story",
+  "bc.sub": "Designed, coded, tested and delivered in 42 hours for an electric bike tour operator",
+
+  "bc.m1.k": "Setting",
+  "bc.m1.v": "Personal project, delivered to the founder of Pink Ducks",
+  "bc.m2.k": "Period",
+  "bc.m2.v": "June 1–6, 2026, 42 hours spread across 20 documented phases",
+  "bc.m3.k": "Nature",
+  "bc.m3.v": "Solo work, paired with an AI development assistant",
+  "bc.m4.k": "Status",
+  "bc.m4.v": "Functional prototype, tested on real iOS and Android devices",
+
+  "bc.call1": "This page is not about quality or safety. It's here because a QSE officer spends their working life in dashboards, field reports, and alert systems. This project shows that I can build one of those, not just use one.",
+
+  "bc.h1": "The problem",
+  "bc.p1": "A guide leads a group cycling through Barcelona. They tell the story of each place, warn about zones closed to bikes, and answer questions. But they can only do it for one group at a time, in one language, and only for the duration of the tour.",
+  "bc.p2": "The question was whether some of that value could persist once the guide is no longer there, without degrading the experience or requiring the cyclist to stop and look at a screen.",
+
+  "bc.h2": "What the app does",
+  "bc.p3": "The guiding principle fits in one sentence: the cyclist should never have to stop, look down, or search for anything. Everything triggers on its own or is controlled by voice.",
+  "bc.d1.k": "Proactive geofencing",
+  "bc.d1.v": "An invisible circle of around 40 metres surrounds each location. As soon as the cyclist enters it, the entry opens and the story of the place is read aloud. They didn't ask for anything.",
+  "bc.d2.k": "Regulatory warnings",
+  "bc.d2.v": "Barcelona has strict rules and real fines. The app warns before the infringement, not after. That is prevention, in the literal sense.",
+  "bc.d3.k": "Multilingual voice assistant",
+  "bc.d3.v": "A conversational AI that answers spoken questions, aware of the cyclist's location, in six languages.",
+  "bc.d4.k": "Turn-by-turn navigation",
+  "bc.d4.v": "Manoeuvres announced by voice, with automatic rerouting if the cyclist leaves the planned route.",
+  "bc.d5.k": "Parking search",
+  "bc.d5.v": "The city's open Bicing and Bicibox data, in real time.",
+  "bc.d6.k": "Progress and points",
+  "bc.d6.v": "A gamification layer that encourages discovering new places.",
+
+  "bc.h3": "The tech stack",
+  "bc.t1.k": "App",
+  "bc.t1.v": "React Native, Expo SDK 54 — a single codebase for iOS and Android",
+  "bc.t2.k": "Backend",
+  "bc.t2.v": "Firebase on Google Cloud: five collections, schema and security rules",
+  "bc.t3.k": "Geofencing",
+  "bc.t3.v": "Custom-built engine, based on the Haversine formula",
+  "bc.t4.k": "Artificial intelligence",
+  "bc.t4.v": "Claude integration, context-aware and multilingual",
+  "bc.t5.k": "Navigation",
+  "bc.t5.v": "OSRM routing, voice synthesis of manoeuvres",
+  "bc.t6.k": "Distribution",
+  "bc.t6.v": "EAS Build, installable Android APK",
+  "bc.t7.k": "Automation",
+  "bc.t7.v": "GitHub Actions: a daily generator that grows the places database on its own",
+
+  "bc.h4": "The three decisions that made the project",
+  "bc.p4": "Development didn't follow a straight line, and that's the most instructive part.",
+  "bc.dec1.k": "Dropping no-code",
+  "bc.dec1.v": "The first prototype ran on FlutterFlow. The limits of the free tier blocked the GPS and AI libraries — precisely the core of the product. I stopped after a phase and a half instead of working around it.",
+  "bc.dec2.k": "Rebuilding everything",
+  "bc.dec2.v": "A full switch to React Native and Expo. A free, extensible foundation that would no longer hit a ceiling.",
+  "bc.dec3.k": "Writing my own geofencing engine",
+  "bc.dec3.v": "The Radar.io service rejected sign-ups using a personal address. Rather than drop the feature that gives the app its whole point, I implemented proximity detection myself, using the Haversine formula. Three hours of work, and the dependency was gone.",
+
+  "bc.h5": "What was actually tested",
+  "bc.p5": "On real iPhone and Android devices, via a development server. The voice pipeline was debugged with an on-screen diagnostic overlay that traced every step, from recording to recognition to synthesis. Geofencing was tested both inside and outside Barcelona. All six languages were checked in the interface and by voice. Notifications were tested in the foreground and in the background.",
+
+  "bc.call2": "This is a <b>functional prototype still being tested</b>, not a product in production. The handover document given to the founder lists the current limitations itself, without dressing them up. That is how I present it.",
+
+  "bc.h6": "Why this page belongs on a QSE portfolio",
+  "bc.p6": "Because it answers a question that's rarely asked directly in an interview but that matters: what does this person do when they hit a technical wall and no one is there to help.",
+  "bc.p7": "The answer is here, documented phase by phase. A platform hits its limit, I switch platforms. A service refuses my sign-up, I write the function myself. And at the end I write a document that the founder, who is not technical, can read and understand — because a deliverable no one else can pick up is not a deliverable.",
+
+  "bc.link1": "→ The Pink Ducks strategy thesis this project grew out of"
 }
