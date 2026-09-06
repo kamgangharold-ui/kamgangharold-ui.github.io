@@ -79,13 +79,6 @@
     <h2 data-i18n="py.h2">Le dispositif</h2>
     <p data-i18n="py.p2">Nous avons construit un réacteur à lit fixe à l'échelle laboratoire, alimenté en copeaux de <i>Pterocarpus erinaceus</i> (bois de vène), et instrumenté nous-mêmes : un capteur de masse et un capteur de température (PT100) reliés à une carte Arduino, câblage simulé au préalable sur Proteus 8 pour vérifier le montage avant de le construire.</p>
 
-    <figure class="proj-fig">
-      <a href="../assets/img/projets/pyrolyse-dispositif.png" target="_blank" rel="noopener">
-        <img src="../assets/img/projets/pyrolyse-dispositif.png" alt="Photo du dispositif de pyrolyse : réacteur à lit fixe instrumenté d'un capteur de masse et d'un capteur de température reliés à une carte Arduino." loading="lazy" width="900" height="600">
-      </a>
-      <figcaption data-i18n="img.py.1">Le réacteur à lit fixe et son instrumentation Arduino, construits pour l'essai.</figcaption>
-    </figure>
-
     <h2 data-i18n="py.h3">La modélisation cinétique</h2>
     <p data-i18n="py.p3">Pendant l'essai, nous avons suivi la masse et la température de l'échantillon toutes les cinq à quinze minutes, de la température ambiante jusqu'à plus de 550 °C. Nous en avons tiré la vitesse de chauffe du réacteur : <b>33,6 K par minute</b>.</p>
     <p data-i18n="py.p4">À partir de ces données, nous avons calculé l'énergie d'activation de la réaction par deux méthodes de référence de la littérature, pour pouvoir comparer les résultats entre elles :</p>
@@ -94,13 +87,6 @@
       <li><b data-i18n="py.d2.k">Miura-Maki</b><span data-i18n="py.d2.v">Énergie d'activation : 1,31 kJ/mol</span></li>
     </ul>
     <p data-i18n="py.p5">La régression tracée pour obtenir ces paramètres (ln(β/T²) en fonction de 1/T) affiche un coefficient de détermination <b>R² = 0,975</b>, un ajustement linéaire net sur l'ensemble des points mesurés.</p>
-
-    <figure class="proj-fig">
-      <a href="../assets/img/projets/pyrolyse-regression.png" target="_blank" rel="noopener">
-        <img src="../assets/img/projets/pyrolyse-regression.png" alt="Graphique de régression linéaire : ln(bêta sur T carré) en fonction de 1/T, utilisé pour calculer l'énergie d'activation de la pyrolyse. Coefficient de détermination R carré égal à 0,975." loading="lazy" width="900" height="600">
-      </a>
-      <figcaption data-i18n="img.py.2">Régression utilisée pour calculer l'énergie d'activation, R² = 0,975.</figcaption>
-    </figure>
 
     <h2 data-i18n="py.h4">Ce que nous avons proposé</h2>
     <p data-i18n="py.p6">Une géométrie de réacteur en deux parties, un four et une chambre d'alimentation de la biomasse, avec une fiole de condensation ajoutée pour capturer les gaz condensables plutôt que de les laisser s'échapper. Le volet le plus intéressant n'était pas la transformation elle-même mais son revers : la pyrolyse dégage des gaz nocifs, et nous avons choisi d'intégrer leur traitement au projet plutôt que de le laisser hors périmètre.</p>
