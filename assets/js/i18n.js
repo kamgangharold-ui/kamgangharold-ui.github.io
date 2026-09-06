@@ -69,7 +69,9 @@
   function load(lang) {
     if (lang === "fr") { paint("fr"); return; }
     if (dict[lang]) { paint(lang); return; }
-    fetch(basePath + lang + ".json")
+    // "reload" force une revalidation reseau : sans ca, un texte corrige restait invisible
+    // des heures chez un visiteur ayant deja charge la page, contrairement au francais (HTML).
+    fetch(basePath + lang + ".json", { cache: "reload" })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (json) { dict[lang] = json; paint(lang); })
       .catch(function () {
