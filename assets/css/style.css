@@ -408,3 +408,10 @@ html { scroll-behavior: smooth; scroll-padding-top: 74px; }
   text-decoration: none; color: var(--accent);
 }
 .card__more:hover { text-decoration: underline; }
+
+.int__more { margin-top: 1rem; }
+.int__more a {
+  font-family: var(--f-head); font-size: .92rem; font-weight: 600;
+  text-decoration: none; color: var(--accent);
+}
+.int__more a:hover { text-decoration: underline; }
