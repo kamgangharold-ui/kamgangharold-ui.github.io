@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="auto" data-i18n-path="i18n/" data-i18n-prefix="py.">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pyrolyse : valoriser les déchets de bois en biochar | Harold Kamgang</title>
+<meta name="description" content="Projet tutoré en binôme : modélisation cinétique de la pyrolyse du bois par deux méthodes (Kissinger-Akahira-Sunose, Miura-Maki), régression R² = 0,975, conception d'un réacteur en deux parties.">
+<link rel="canonical" href="https://kamgangharold-ui.github.io/projets/pyrolyse-dechets-bois.html">
+<meta name="theme-color" content="#0A1128">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pyrolyse : valoriser les déchets de bois en biochar">
+<meta property="og:description" content="Modélisation cinétique par deux méthodes, régression R² = 0,975, conception d'un réacteur en deux parties. Projet en binôme.">
+<meta property="og:url" content="https://kamgangharold-ui.github.io/projets/pyrolyse-dechets-bois.html">
+<meta property="og:image" content="https://kamgangharold-ui.github.io/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://kamgangharold-ui.github.io/assets/img/og.png">
+
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/motion.css">
+</head>
+
+<body>
+<a class="skip" href="#main" data-i18n="a11y.skip">Aller au contenu principal</a>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Navigation principale">
+    <a class="nav__brand" href="../"><span>Harold</span> Kamgang</a>
+    <ul class="nav__menu nav__menu--sub" id="navmenu">
+      <li><a href="../#projects" data-i18n="nav.back">← Toutes les réalisations</a></li>
+    </ul>
+    <div class="nav__tools">
+      <div class="langsel">
+        <button class="pill" id="lang" aria-haspopup="listbox" aria-expanded="false" aria-label="Choisir la langue (actuelle : FR)"><span aria-hidden="true">FR</span></button>
+        <ul class="langsel__menu" id="langmenu" role="listbox" hidden>
+          <li class="langsel__opt is-current" role="option" data-lang="fr" tabindex="0" aria-selected="true">FR</li>
+          <li class="langsel__opt" role="option" data-lang="en" tabindex="0" aria-selected="false">EN</li>
+          <li class="langsel__opt" role="option" data-lang="es" tabindex="0" aria-selected="false">ES</li>
+          <li class="langsel__opt" role="option" data-lang="de" tabindex="0" aria-selected="false">DE</li>
+        </ul>
+      </div>
+      <button class="pill" id="theme" aria-label="Basculer le thème sombre">
+        <svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><g><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></g></svg>
+        <svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.2 8.2 0 0 1 9.5 4a8.3 8.3 0 1 0 10.5 10.5z"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero hero--proj">
+  <div class="wrap">
+    <p class="hero__kicker" data-i18n="py.kicker">Environnement · Projet tutoré · SJP4 · En binôme</p>
+    <h1 class="proj__h1" data-i18n="py.title">Pyrolyse : valoriser les déchets de bois en biochar</h1>
+    <p class="hero__role" data-i18n="py.sub">Modéliser une réaction chimique avec un réacteur construit à la main et une carte Arduino</p>
+
+    <ul class="meta">
+      <li><b data-i18n="py.m1.k">Cadre</b><span data-i18n="py.m1.v">Projet tutoré, Saint-Jérôme Polytechnique (SJP4, génie des procédés)</span></li>
+      <li><b data-i18n="py.m2.k">Équipe</b><span data-i18n="py.m2.v">En binôme avec Vannick Baombé</span></li>
+      <li><b data-i18n="py.m3.k">Période</b><span data-i18n="py.m3.v">Mars – juillet 2021</span></li>
+      <li><b data-i18n="py.m4.k">Encadrement</b><span data-i18n="py.m4.v">Mme Kobbe Dama Nathalie, enseignante-chercheuse</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap prose prose--proj">
+
+    <h2 data-i18n="py.h1">Le problème</h2>
+    <p data-i18n="py.p1">Les déchets de bois traités et non traités représentent environ <b>27 % du gisement de déchets dangereux au Cameroun</b>, soit près de 200 000 m³ transportés en décharge chaque année. Notre question : peut-on transformer ce déchet en une ressource énergétique, le biochar, plutôt que de l'enfouir ?</p>
+
+    <h2 data-i18n="py.h2">Le dispositif</h2>
+    <p data-i18n="py.p2">Nous avons construit un réacteur à lit fixe à l'échelle laboratoire, alimenté en copeaux de <i>Pterocarpus erinaceus</i> (bois de vène), et instrumenté nous-mêmes : un capteur de masse et un capteur de température (PT100) reliés à une carte Arduino, câblage simulé au préalable sur Proteus 8 pour vérifier le montage avant de le construire.</p>
+
+    <figure class="proj-fig">
+      <a href="../assets/img/projets/pyrolyse-dispositif.png" target="_blank" rel="noopener">
+        <img src="../assets/img/projets/pyrolyse-dispositif.png" alt="Photo du dispositif de pyrolyse : réacteur à lit fixe instrumenté d'un capteur de masse et d'un capteur de température reliés à une carte Arduino." loading="lazy" width="900" height="600">
+      </a>
+      <figcaption data-i18n="img.py.1">Le réacteur à lit fixe et son instrumentation Arduino, construits pour l'essai.</figcaption>
+    </figure>
+
+    <h2 data-i18n="py.h3">La modélisation cinétique</h2>
+    <p data-i18n="py.p3">Pendant l'essai, nous avons suivi la masse et la température de l'échantillon toutes les cinq à quinze minutes, de la température ambiante jusqu'à plus de 550 °C. Nous en avons tiré la vitesse de chauffe du réacteur : <b>33,6 K par minute</b>.</p>
+    <p data-i18n="py.p4">À partir de ces données, nous avons calculé l'énergie d'activation de la réaction par deux méthodes de référence de la littérature, pour pouvoir comparer les résultats entre elles :</p>
+    <ul class="deliv">
+      <li><b data-i18n="py.d1.k">Kissinger-Akahira-Sunose</b><span data-i18n="py.d1.v">Énergie d'activation : 0,81 kJ/mol</span></li>
+      <li><b data-i18n="py.d2.k">Miura-Maki</b><span data-i18n="py.d2.v">Énergie d'activation : 1,31 kJ/mol</span></li>
+    </ul>
+    <p data-i18n="py.p5">La régression tracée pour obtenir ces paramètres (ln(β/T²) en fonction de 1/T) affiche un coefficient de détermination <b>R² = 0,975</b>, un ajustement linéaire net sur l'ensemble des points mesurés.</p>
+
+    <figure class="proj-fig">
+      <a href="../assets/img/projets/pyrolyse-regression.png" target="_blank" rel="noopener">
+        <img src="../assets/img/projets/pyrolyse-regression.png" alt="Graphique de régression linéaire : ln(bêta sur T carré) en fonction de 1/T, utilisé pour calculer l'énergie d'activation de la pyrolyse. Coefficient de détermination R carré égal à 0,975." loading="lazy" width="900" height="600">
+      </a>
+      <figcaption data-i18n="img.py.2">Régression utilisée pour calculer l'énergie d'activation, R² = 0,975.</figcaption>
+    </figure>
+
+    <h2 data-i18n="py.h4">Ce que nous avons proposé</h2>
+    <p data-i18n="py.p6">Une géométrie de réacteur en deux parties, un four et une chambre d'alimentation de la biomasse, avec une fiole de condensation ajoutée pour capturer les gaz condensables plutôt que de les laisser s'échapper. Le volet le plus intéressant n'était pas la transformation elle-même mais son revers : la pyrolyse dégage des gaz nocifs, et nous avons choisi d'intégrer leur traitement au projet plutôt que de le laisser hors périmètre.</p>
+
+    <h2 data-i18n="py.h5">Ce que ce travail nous a appris</h2>
+    <p data-i18n="py.p7">Mener une cinétique chimique de bout en bout, du montage électronique jusqu'à la comparaison de deux modèles mathématiques, sans laboratoire d'analyse thermogravimétrique conventionnel : construire l'instrument avant de pouvoir mesurer le phénomène. Projet mené avec objectifs, jalons, calendrier et budget définis dès le départ, pas seulement une expérimentation en cours de route.</p>
+
+    <p class="backlink"><a href="parcours-academique.html" data-i18n="py.back1">→ Voir tout mon parcours d'ingénieur, projet par projet</a></p>
+    <p class="backlink"><a href="../#projects" data-i18n="p.back">← Retour à toutes les réalisations</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p>© <span id="yr">2026</span> Harold Kamgang</p>
+    <p data-i18n="foot.note">Site construit à la main, sans pisteur, sans cookie.</p>
+  </div>
+</footer>
+
+<script src="../assets/js/i18n.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
