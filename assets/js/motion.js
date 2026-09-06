@@ -1,4 +1,4 @@
-/* motion.js — apparition au défilement, halo qui suit la souris,
+/* motion.js : apparition au défilement, halo qui suit la souris,
    barre de progression. Ajouté le 29/08/2026.
 
    Tout est désactivé si l'utilisateur a demandé moins d'animations

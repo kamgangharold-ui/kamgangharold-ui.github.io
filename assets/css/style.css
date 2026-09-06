@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════
-   Harold Kamgang — portfolio
+   Harold Kamgang : portfolio
    Palette reprise du CV : navy #0A1128 · teal #1A6E8E · rose #A97380
    ═══════════════════════════════════════════════════════════════════ */
 
@@ -114,6 +114,23 @@ img { max-width: 100%; height: auto; }
   border: 1px solid var(--line); border-radius: 7px; cursor: pointer;
 }
 .pill:hover { color: var(--head); border-color: var(--accent); }
+
+.langsel { position: relative; }
+.langsel__menu {
+  position: absolute; top: 40px; right: 0; z-index: 30;
+  display: flex; flex-direction: column; gap: 2px;
+  min-width: 36px; margin: 0; padding: 4px; list-style: none;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--sh);
+}
+.langsel__menu[hidden] { display: none; }
+.langsel__opt {
+  display: block; width: 100%; padding: 6px 10px; border: 0; border-radius: 5px;
+  background: transparent; cursor: pointer; text-align: left;
+  font-family: var(--f-head); font-size: .8rem; font-weight: 700; letter-spacing: .04em;
+  color: var(--txt-2);
+}
+.langsel__opt:hover, .langsel__opt:focus-visible { color: var(--head); background: var(--bg-alt); }
+.langsel__opt.is-current { color: var(--accent); }
 .pill svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; }
 .ico-moon { display: none; fill: currentColor; stroke: none; }
 html[data-theme="dark"] .ico-sun { display: none; }

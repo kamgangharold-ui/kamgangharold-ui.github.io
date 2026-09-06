@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kribi — réduction des rejets d'eaux huileuses | Harold Kamgang</title>
+<title>Kribi : réduction des rejets d'eaux huileuses | Harold Kamgang</title>
 <meta name="description" content="Mémoire d'ingénieur à la centrale à gaz de 216 MW de Kribi : corrélation 0,92, diagramme de Pareto sur les fuites d'huile, Ishikawa sur l'unité de traitement, système de détection UV.">
 <link rel="canonical" href="https://kamgangharold-ui.github.io/projets/kribi-eaux-huileuses.html">
 <meta name="theme-color" content="#0A1128">
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="Kribi — réduction des rejets d'eaux huileuses">
+<meta property="og:title" content="Kribi : réduction des rejets d'eaux huileuses">
 <meta property="og:description" content="Mémoire d'ingénieur, centrale à gaz de 216 MW. Corrélation 0,92, Pareto 20/80, Ishikawa, détection UV des fuites.">
 <meta property="og:url" content="https://kamgangharold-ui.github.io/projets/kribi-eaux-huileuses.html">
 <meta property="og:image" content="https://kamgangharold-ui.github.io/assets/img/og.png">
@@ -36,7 +36,15 @@
       <li><a href="../#projects" data-i18n="nav.back">← Toutes les réalisations</a></li>
     </ul>
     <div class="nav__tools">
-      <button class="pill" id="lang" aria-label="Switch to English"><span aria-hidden="true">EN</span></button>
+      <div class="langsel">
+        <button class="pill" id="lang" aria-haspopup="listbox" aria-expanded="false" aria-label="Choisir la langue (actuelle : FR)"><span aria-hidden="true">FR</span></button>
+        <ul class="langsel__menu" id="langmenu" role="listbox" hidden>
+          <li class="langsel__opt is-current" role="option" data-lang="fr" tabindex="0" aria-selected="true">FR</li>
+          <li class="langsel__opt" role="option" data-lang="en" tabindex="0" aria-selected="false">EN</li>
+          <li class="langsel__opt" role="option" data-lang="es" tabindex="0" aria-selected="false">ES</li>
+          <li class="langsel__opt" role="option" data-lang="de" tabindex="0" aria-selected="false">DE</li>
+        </ul>
+      </div>
       <button class="pill" id="theme" aria-label="Basculer le thème sombre">
         <svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><g><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></g></svg>
         <svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.2 8.2 0 0 1 9.5 4a8.3 8.3 0 1 0 10.5 10.5z"/></svg>
@@ -50,7 +58,7 @@
 <section class="hero hero--proj">
   <div class="wrap">
     <p class="hero__kicker" data-i18n="k.kicker">Environnement · Analyse de données · Mémoire d'ingénieur</p>
-    <h1 class="proj__h1" data-i18n="k.title">Kribi — réduire les rejets d'eaux huileuses d'une centrale à gaz</h1>
+    <h1 class="proj__h1" data-i18n="k.title">Kribi : réduire les rejets d'eaux huileuses d'une centrale à gaz</h1>
     <p class="hero__role" data-i18n="k.sub">Comment 200 maintenances sur 250 ont conduit à un diagnostic chiffré, puis à un système de détection des fuites</p>
 
     <ul class="meta">
@@ -79,7 +87,7 @@
       <li><b data-i18n="k.v1.k">2018</b><span data-i18n="k.v1.v">1 005 000</span></li>
       <li><b data-i18n="k.v2.k">2019</b><span data-i18n="k.v2.v">532 500</span></li>
       <li><b data-i18n="k.v3.k">2020</b><span data-i18n="k.v3.v">659 000</span></li>
-      <li><b data-i18n="k.v4.k">2021</b><span data-i18n="k.v4.v">1 316 000 — un doublement en deux ans</span></li>
+      <li><b data-i18n="k.v4.k">2021</b><span data-i18n="k.v4.v">1 316 000, un doublement en deux ans</span></li>
       <li><b data-i18n="k.v5.k">Janvier à avril 2022</b><span data-i18n="k.v5.v">262 000</span></li>
     </ul>
 
@@ -105,7 +113,7 @@
       <a href="../assets/img/projets/kribi-correlation.png" target="_blank" rel="noopener">
         <img src="../assets/img/projets/kribi-correlation.png" alt="Graphique en barres : volume de déchets liquides et consommation d'huile de lubrification entre 2019 et 2021, tous deux en forte hausse en 2021." loading="lazy" width="930" height="573">
       </a>
-      <figcaption data-i18n="img.k.1">Suivi de l'évolution des paramètres du moteur, 2019-2021 — la série de données derrière la corrélation de 0,92.</figcaption>
+      <figcaption data-i18n="img.k.1">Suivi de l'évolution des paramètres du moteur, 2019-2021, la série de données derrière la corrélation de 0,92.</figcaption>
     </figure>
 
     <p data-i18n="k.p5">Ces deux chiffres transforment une intuition en fait établi : la centrale ne perdait pas seulement de l'huile, elle payait cette perte trois fois, en achat d'huile, en maintenance moteur et en maintenance de l'unité de traitement.</p>
@@ -144,7 +152,7 @@
 <footer class="foot">
   <div class="wrap foot__in">
     <p>© <span id="yr">2026</span> Harold Kamgang</p>
-    <p data-i18n="foot.note">Site construit à la main — sans pisteur, sans cookie.</p>
+    <p data-i18n="foot.note">Site construit à la main, sans pisteur, sans cookie.</p>
   </div>
 </footer>
 

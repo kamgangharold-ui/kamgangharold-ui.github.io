@@ -90,8 +90,8 @@
       if (form.action.indexOf("REMPLACER_PAR_TON_ID") !== -1) {
         e.preventDefault();
         note.textContent = document.documentElement.lang === "en"
-          ? "The form is not connected yet — please use LinkedIn or the email button."
-          : "Le formulaire n'est pas encore relié — utilise LinkedIn ou le bouton e-mail.";
+          ? "The form is not connected yet, please use LinkedIn or the email button."
+          : "Le formulaire n'est pas encore relié, utilise LinkedIn ou le bouton e-mail.";
         return;
       }
 
@@ -107,8 +107,8 @@
           if (!r.ok) throw new Error(r.status);
           form.reset();
           note.textContent = document.documentElement.lang === "en"
-            ? "Thank you — I'll get back to you within 48 hours."
-            : "Merci — je reviens vers vous sous 48 heures.";
+            ? "Thank you. I'll get back to you within 48 hours."
+            : "Merci, je reviens vers vous sous 48 heures.";
         })
         .catch(function () {
           note.textContent = document.documentElement.lang === "en"
