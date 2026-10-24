@@ -415,3 +415,4 @@ html { scroll-behavior: smooth; scroll-padding-top: 74px; }
   text-decoration: none; color: var(--accent);
 }
 .int__more a:hover { text-decoration: underline; }
+.form[hidden] { display: none; }
