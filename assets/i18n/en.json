@@ -212,7 +212,7 @@
   "proj.8.more": "See the five projects →",
   "proj.9.t": "Barcelona CycleGuide · voice-first mobile app",
   "proj.9.c": "A bike guide can only accompany one group at a time, in one language, and only during the tour. Personal project delivered to the founder of Pink Ducks.",
-  "proj.9.a": "Full design and build in 42 hours across 20 phases: React Native and Firebase, a geofencing engine written from scratch, a six-language AI voice assistant, turn-by-turn navigation.",
+  "proj.9.a": "AI-assisted design and build: React Native and Firebase, a custom geofencing engine, a multilingual AI voice assistant, turn-by-turn navigation.",
   "proj.9.r": "A working prototype tested on real iPhone and Android handsets, delivered with its technical documentation and handover guide. The app warns about restricted zones before the fine: prevention, quite literally.",
   "proj.9.more": "Read the full project →",
   "tl.6.d": "Mar – Jul 2021",
