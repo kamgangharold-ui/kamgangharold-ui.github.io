@@ -416,3 +416,6 @@ html { scroll-behavior: smooth; scroll-padding-top: 74px; }
 }
 .int__more a:hover { text-decoration: underline; }
 .form[hidden] { display: none; }
+
+/* CV link wrappers: data-i18n swaps the whole link so each language gets its own PDF */
+.cvlink{display:contents}
