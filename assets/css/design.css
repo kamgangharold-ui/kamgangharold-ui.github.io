@@ -4,7 +4,8 @@
    Retirer sa ligne du <head> rend la page à son état précédent.
 
    Direction : « relève de poste ». Un hero sombre à aurore lente
-   (teal et rose du CV sur le navy), un compteur de production en
+   (indigo, ambre et cyan sur le navy du CV ; l'ambre est la couleur des
+   panneaux de sécurité, réservée au chiffre des 19 mois et au bouton principal), un compteur de production en
    grand pour les 19 mois, un bandeau défilant des méthodes, des
    cartes à relief. Une seule scène animée au chargement, le reste
    répond au défilement et au pointeur.
@@ -17,12 +18,13 @@
 :root {
   --ease-out: cubic-bezier(.23, 1, .32, 1);
   --ease-io:  cubic-bezier(.77, 0, .175, 1);
-  --night:    #070C1C;
-  --night-2:  #101C40;
-  --on-night:   #EEF2FA;
-  --on-night-2: #B4BFD6;
-  --glow-teal: 63, 168, 204;
-  --glow-rose: 217, 165, 180;
+  --night:    #070B1A;
+  --night-2:  #141C48;
+  --on-night:   #EEF1FF;
+  --on-night-2: #B7C0E0;
+  --glow-indigo: 94, 108, 255;
+  --glow-amber: 255, 160, 70;
+  --glow-cyan: 34, 199, 232;
 }
 
 /* ───────── Thème : la couleur des barres de défilement et des champs suit le thème ───────── */
@@ -40,7 +42,7 @@ a, button, [role="button"], .langsel__opt { touch-action: manipulation; }
 input, textarea, select { font-size: 16px; }
 
 .hero :focus-visible, .sec--cta :focus-visible, .ticker :focus-visible {
-  outline-color: #9FD8EE;
+  outline-color: #C3CEFF;
 }
 
 /* ───────── En-tête translucide ───────── */
@@ -92,24 +94,24 @@ input, textarea, select { font-size: 16px; }
 .aurora i { position: absolute; display: block; border-radius: 50%; will-change: transform; }
 .aurora i:nth-child(1) {
   width: 52vmax; height: 52vmax; left: -4%; top: -14%;
-  background: radial-gradient(circle, rgba(var(--glow-teal), .66) 0%, rgba(var(--glow-teal), 0) 64%);
+  background: radial-gradient(circle, rgba(var(--glow-indigo), .62) 0%, rgba(var(--glow-indigo), 0) 64%);
   animation: drift-a 28s var(--ease-io) infinite alternate;
 }
 .aurora i:nth-child(2) {
   width: 44vmax; height: 44vmax; right: -6%; top: 10%;
-  background: radial-gradient(circle, rgba(var(--glow-rose), .5) 0%, rgba(var(--glow-rose), 0) 64%);
+  background: radial-gradient(circle, rgba(var(--glow-amber), .36) 0%, rgba(var(--glow-amber), 0) 64%);
   animation: drift-b 34s var(--ease-io) infinite alternate;
 }
 .aurora i:nth-child(3) {
   width: 40vmax; height: 40vmax; left: 30%; bottom: -26%;
-  background: radial-gradient(circle, rgba(26, 110, 142, .8) 0%, rgba(26, 110, 142, 0) 64%);
+  background: radial-gradient(circle, rgba(var(--glow-cyan), .42) 0%, rgba(var(--glow-cyan), 0) 64%);
   animation: drift-c 40s var(--ease-io) infinite alternate;
 }
 @keyframes drift-a { to { transform: translate3d(16vmax, 9vmax, 0) scale(1.16); } }
 @keyframes drift-b { to { transform: translate3d(-14vmax, 7vmax, 0) scale(.9); } }
 @keyframes drift-c { to { transform: translate3d(-10vmax, -12vmax, 0) scale(1.2); } }
 
-.hero__kicker { color: #8CCBE3; }
+.hero__kicker { color: #A9B8FF; }
 .hero__name {
   color: #fff; font-size: clamp(3.3rem, 10.5vw, 7.6rem); line-height: .9;
   letter-spacing: -.012em; margin-bottom: .55rem;
@@ -121,7 +123,7 @@ input, textarea, select { font-size: 16px; }
 
 /* boutons de l'accueil */
 .hero .btn { border-radius: 999px; padding: .75rem 1.5rem; position: relative; overflow: hidden; }
-.hero .btn--solid { background: #1A6E8E; color: #fff; box-shadow: 0 10px 28px -12px rgba(var(--glow-teal), .9); }
+.hero .btn--solid { background: linear-gradient(135deg, #FFC24A, #FF9A3C); color: #0A1128; box-shadow: 0 12px 30px -12px rgba(var(--glow-amber), .85); }
 .hero .btn--solid::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, .28) 50%, transparent 70%);
@@ -144,7 +146,7 @@ input, textarea, select { font-size: 16px; }
 .stats li:first-child { padding: 1.3rem 1.6rem 1.5rem; }
 .stats li:first-child .stats__n {
   font-size: clamp(4.6rem, 10vw, 7.2rem); line-height: .88;
-  background: linear-gradient(180deg, #fff 20%, #9FD8EE 100%);
+  background: linear-gradient(180deg, #fff 18%, #FFC978 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .stats li:first-child .stats__u { font-size: 1.7rem; margin-left: .5rem; }
@@ -195,7 +197,7 @@ input, textarea, select { font-size: 16px; }
 }
 .ticker__track span::after {
   content: ""; width: 6px; height: 6px; margin: 0 1.6rem; border-radius: 50%;
-  background: var(--rose); flex: none;
+  background: var(--amber); flex: none;
 }
 @keyframes ticker { to { transform: translate3d(-50%, 0, 0); } }
 @media (hover: hover) and (pointer: fine) {
@@ -238,7 +240,7 @@ input, textarea, select { font-size: 16px; }
 .tl { position: relative; }
 .tl__fill {
   position: absolute; left: -2px; top: 0; bottom: 0; width: 2px; pointer-events: none;
-  background: linear-gradient(180deg, var(--accent), var(--rose));
+  background: linear-gradient(180deg, var(--accent), var(--amber));
   transform: scaleY(0); transform-origin: top center; will-change: transform;
 }
 
@@ -252,7 +254,7 @@ html[data-theme="dark"] .sec--cta { background: var(--night); }
 .sec--cta .aurora i:nth-child(1) { left: -12%; top: -30%; }
 .sec--cta .aurora i:nth-child(2) { right: -10%; top: auto; bottom: -34%; }
 .sec--cta .sec__t { font-size: clamp(2.8rem, 9vw, 6.4rem); }
-.sec--cta .sec__t::after { background: linear-gradient(90deg, var(--rose), transparent); }
+.sec--cta .sec__t::after { background: linear-gradient(90deg, var(--amber), transparent); }
 .ct__lead { color: var(--on-night-2); font-size: clamp(1.1rem, 2vw, 1.4rem); line-height: 1.5; max-width: 52ch; }
 .ct__link {
   border-radius: 999px; padding: .95rem 1.4rem; font-size: 1.02rem;
@@ -270,7 +272,7 @@ html[data-theme="dark"] .sec--cta { background: var(--night); }
 @media (hover: hover) and (pointer: fine) {
   .ct__link:hover { transform: translateY(-3px); }
   .hero .btn--solid:hover { background: #fff; color: var(--navy); }
-  .hero .btn--ghost:hover { border-color: #9FD8EE; color: #9FD8EE; }
+  .hero .btn--ghost:hover { border-color: #FFC978; color: #FFC978; }
 }
 
 /* ───────── Changement de langue : fondu enchaîné de la page ───────── */

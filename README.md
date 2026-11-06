@@ -4,7 +4,7 @@ Harold Kamgang's personal site, <https://kamgangharold-ui.github.io>
 
 ## What it does
 
-Single page, plain HTML/CSS/JS, no build step. Four languages (FR/EN/ES/DE), dark mode, no tracker or cookie. Colors and typography match the CV: navy `#0A1128`, teal `#1A6E8E`, rose `#A97380`, Roboto Condensed.
+Single page, plain HTML/CSS/JS, no build step. Four languages (FR/EN/ES/DE), dark mode, no tracker or cookie. Palette "signal" (November 2026): the CV navy `#0A1128` as base, indigo `#3347D9` (dark theme `#8EA0FF`) for links and structure, amber `#F5A524` as the one hot accent (the safety sign color, used for the 19 months counter and the main button), Roboto Condensed.
 
 ---
 
