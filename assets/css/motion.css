@@ -9,9 +9,9 @@
    ═══════════════════════════════════════════════════════════════ */
 
 :root{
-  --neon:#4F62F2;
-  --neon-soft:rgba(79,98,242,.38);
-  --neon-hot:rgba(79,98,242,.55);
+  --neon:#1A6E8E;
+  --neon-soft:rgba(26,110,142,.38);
+  --neon-hot:rgba(26,110,142,.55);
   --ease-out:cubic-bezier(.22,.61,.36,1);
 }
 
@@ -94,7 +94,7 @@
 /* ── 8. Barre de progression de lecture, en haut ─────────────── */
 #progress{
   position:fixed; top:0; left:0; height:2px; width:100%;
-  background:linear-gradient(90deg, var(--neon), var(--amber));
+  background:linear-gradient(90deg, var(--neon), var(--accent-soft));
   z-index:9999;
   transform:scaleX(0); transform-origin:0 50%;
   will-change:transform;
@@ -121,7 +121,7 @@
 /* ── 11. Images de projet ─────────────────────────────────────
    Ajouté le 30/08/2026 : captures d'app, graphiques et schémas
    extraits des documents d'Harold, integrés aux pages projet.
-   Même palette que le site (navy / indigo / ambre), bords arrondis
+   Même palette que le site (navy, un accent teal), bords arrondis
    discrets, poids maîtrisé côté fichiers (voir assets/img/projets/).
    ─────────────────────────────────────────────────────────────── */
 
@@ -199,7 +199,7 @@
   .tl__i:hover::before,
   .tl__i:hover > :first-child::before{
     background:var(--neon);
-    box-shadow:0 0 0 4px rgba(79,98,242,.22), 0 0 16px 2px var(--neon-hot);
+    box-shadow:0 0 0 4px rgba(26,110,142,.22), 0 0 16px 2px var(--neon-hot);
     transform:scale(1.25);
   }
   .tl__i:hover .tl__r{ color:var(--neon); }
