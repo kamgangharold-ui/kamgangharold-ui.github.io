@@ -4,7 +4,7 @@ Harold Kamgang's personal site, <https://kamgangharold-ui.github.io>
 
 ## What it does
 
-Single page, plain HTML/CSS/JS, no build step. Four languages (FR/EN/ES/DE), dark mode, no tracker or cookie. Colors and typography match the CV: navy `#0A1128`, teal `#1A6E8E`, rose `#A97380`, Roboto Condensed.
+Single page, plain HTML/CSS/JS, no build step. Four languages (FR/EN/ES/DE), dark mode, no tracker or cookie. Palette (November 2026, kept calm): the CV navy `#0A1128` as ground, one cool accent, the site teal (`#1A6E8E` on light, `#56A7C4` on dark), white and soft grey text. No other hue. Roboto Condensed.
 
 ---
 

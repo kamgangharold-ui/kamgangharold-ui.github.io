@@ -53,7 +53,7 @@
     var cx = 0, cy = 0, tx = 0, ty = 0, visible = true, boucle = false;
 
     function cible() {
-      var s = Math.min(window.scrollY, window.innerHeight) * 0.14;
+      var s = Math.min(window.scrollY, window.innerHeight) * 0.06;
       aurore.style.transform = "translate3d(" + cx.toFixed(1) + "px," + (cy + s).toFixed(1) + "px,0)";
     }
     function anime() {
@@ -69,8 +69,8 @@
     if (fin) {
       hero.addEventListener("pointermove", function (e) {
         var r = hero.getBoundingClientRect();
-        tx = ((e.clientX - r.left) / r.width - 0.5) * -36;
-        ty = ((e.clientY - r.top) / r.height - 0.5) * -26;
+        tx = ((e.clientX - r.left) / r.width - 0.5) * -14;
+        ty = ((e.clientY - r.top) / r.height - 0.5) * -10;
         lance();
       });
     }
