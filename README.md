@@ -63,6 +63,12 @@ The six pages in `projets/` use the same system as the home page: same header wi
 
 All of it lives in `assets/css/design.css` and `assets/js/design.js`, loaded only by `index.html`. Remove their two lines from the `<head>` and the end of `<body>` to go back to the previous look. Rules held everywhere: only `transform` and `opacity` are animated, `prefers-reduced-motion: reduce` turns every animation off (counters show their final value at once), hover styles sit behind `(hover: hover) and (pointer: fine)`, no library and no extra font. The language switch cross fades through the View Transitions API where the browser has it, and swaps the text directly elsewhere. Counters end on the exact printed value, and the numbers in the HTML stay the source of truth.
 
+## Project images and the image viewer (November 2026)
+
+Every image on a project page is a link to the file with `data-lightbox` and no `target`. `assets/js/lightbox.js` opens it in a modal `<dialog>` (close button, Esc, click or tap outside, swipe, arrow keys, focus returned to the link, page scroll untouched, the browser Back button closes the viewer). Without JavaScript the link opens the file in the same tab, so Back still returns to the page. Cause of the old defect: a plain `<a href="image.png" target="_blank">`, which on a phone or in an embedded browser opens the bare file in a tab with no way back to the site.
+
+New figures are crops of Harold's own reports (WebP, `width` and `height` set, `loading="lazy"`). Each has a caption that names its source and an alt text in the four languages (`alt.*` keys, applied through `data-i18n-alt`). The project pages and the home cards are written in the COO and operations direction: context, action, result, one takeaway per project.
+
 ## Tracking
 
 None, this README's Status section below is the tracker.

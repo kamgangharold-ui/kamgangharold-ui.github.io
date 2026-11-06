@@ -19,6 +19,9 @@
 
   var nodes = Array.prototype.slice.call(document.querySelectorAll("[data-i18n]"));
   nodes.forEach(function (el) { base[el.dataset.i18n] = el.innerHTML; });
+  // textes alternatifs des images : data-i18n-alt="clé", traduits comme le reste
+  var altNodes = Array.prototype.slice.call(document.querySelectorAll("[data-i18n-alt]"));
+  altNodes.forEach(function (el) { base[el.dataset.i18nAlt] = el.getAttribute("alt") || ""; });
 
   // Plusieurs pages projet partagent un seul dictionnaire par langue : une clé
   // "meta.title" non préfixée serait écrasée par la dernière page qui l'a
@@ -41,6 +44,11 @@
     nodes.forEach(function (el) {
       var v = d[el.dataset.i18n];
       if (typeof v === "string") el.innerHTML = v;
+    });
+
+    altNodes.forEach(function (el) {
+      var a = d[el.dataset.i18nAlt];
+      if (typeof a === "string") el.setAttribute("alt", a);
     });
 
     if (d[titleKey]) document.title = d[titleKey];
