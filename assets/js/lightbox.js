@@ -4,8 +4,10 @@
    target="_blank". Sur téléphone ou dans un navigateur intégré, cela ouvre le fichier nu
    dans un onglet sans la page ni le menu : plus aucun moyen de revenir au site.
 
-   Sans JavaScript (ou sans <dialog>), le lien reste un lien ordinaire dans le même onglet :
-   le bouton Retour du navigateur ramène à la page, rien ne piège le visiteur.
+   Sans JavaScript (ou sans <dialog>), le lien reste un lien ordinaire : il ouvre le fichier
+   dans un nouvel onglet (target="_blank" rel="noopener"), la page d'origine reste ouverte.
+   Avec JavaScript, le clic ouvre cette fenêtre, et un bouton « Ouvrir en taille réelle dans
+   un nouvel onglet » donne le fichier pour zoomer ou le télécharger.
    Avec JavaScript : <dialog> modal (focus piégé dans la fenêtre puis rendu au lien, Échap,
    bouton Fermer visible, clic ou toucher hors de l'image, glisser vers le bas ou le côté sur
    téléphone), le défilement de la page ne bouge pas, et le bouton Retour ferme la fenêtre
@@ -16,10 +18,10 @@
   if (!links.length || typeof HTMLDialogElement === "undefined") return;
 
   var LABELS = {
-    fr: { close: "Fermer", prev: "Image précédente", next: "Image suivante", dlg: "Image agrandie" },
-    en: { close: "Close", prev: "Previous image", next: "Next image", dlg: "Enlarged image" },
-    es: { close: "Cerrar", prev: "Imagen anterior", next: "Imagen siguiente", dlg: "Imagen ampliada" },
-    de: { close: "Schließen", prev: "Vorheriges Bild", next: "Nächstes Bild", dlg: "Vergrößertes Bild" }
+    fr: { close: "Fermer", prev: "Image précédente", next: "Image suivante", dlg: "Image agrandie", full: "Ouvrir en taille réelle dans un nouvel onglet" },
+    en: { close: "Close", prev: "Previous image", next: "Next image", dlg: "Enlarged image", full: "Open full size in a new tab" },
+    es: { close: "Cerrar", prev: "Imagen anterior", next: "Imagen siguiente", dlg: "Imagen ampliada", full: "Abrir en tamaño real en una pestaña nueva" },
+    de: { close: "Schließen", prev: "Vorheriges Bild", next: "Nächstes Bild", dlg: "Vergrößertes Bild", full: "In Originalgröße in neuem Tab öffnen" }
   };
   function lbl() { return LABELS[document.documentElement.lang] || LABELS.fr; }
 
@@ -28,7 +30,8 @@
   dlg.innerHTML =
     '<button type="button" class="lb__x" autofocus><span aria-hidden="true">&times;</span></button>' +
     '<button type="button" class="lb__nav lb__prev"><span aria-hidden="true">&#8249;</span></button>' +
-    '<figure class="lb__fig"><img class="lb__img" alt=""><figcaption class="lb__cap"></figcaption></figure>' +
+    '<figure class="lb__fig"><img class="lb__img" alt=""><figcaption class="lb__cap"></figcaption>' +
+    '<a class="lb__full" target="_blank" rel="noopener"></a></figure>' +
     '<button type="button" class="lb__nav lb__next"><span aria-hidden="true">&#8250;</span></button>';
   document.body.appendChild(dlg);
   var img = dlg.querySelector(".lb__img");
@@ -36,6 +39,7 @@
   var bx = dlg.querySelector(".lb__x");
   var bp = dlg.querySelector(".lb__prev");
   var bn = dlg.querySelector(".lb__next");
+  var bf = dlg.querySelector(".lb__full");
   var idx = 0, opener = null, pushed = false, closing = false;
 
   function show(i) {
@@ -51,6 +55,8 @@
     bx.setAttribute("aria-label", L.close);
     bp.setAttribute("aria-label", L.prev);
     bn.setAttribute("aria-label", L.next);
+    bf.href = a.getAttribute("href");
+    bf.textContent = L.full;
     bp.hidden = bn.hidden = links.length < 2;
   }
 
@@ -87,7 +93,7 @@
   bp.addEventListener("click", function (e) { e.stopPropagation(); show(idx - 1); });
   bn.addEventListener("click", function (e) { e.stopPropagation(); show(idx + 1); });
   // clic ou toucher n'importe où ailleurs que sur un bouton : fermer
-  dlg.addEventListener("click", function (e) { if (!e.target.closest("button")) close(); });
+  dlg.addEventListener("click", function (e) { if (!e.target.closest("button, a")) close(); });
   dlg.addEventListener("keydown", function (e) {
     if (e.key === "ArrowLeft") { show(idx - 1); }
     else if (e.key === "ArrowRight") { show(idx + 1); }
