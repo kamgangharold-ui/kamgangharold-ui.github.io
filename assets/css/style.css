@@ -20,8 +20,8 @@
   --head:    var(--navy);
   --accent:  var(--teal);
 
-  --f-head: "Roboto Condensed", "Arial Narrow", system-ui, sans-serif;
-  --f-body: "Source Sans 3", system-ui, -apple-system, Segoe UI, sans-serif;
+  --f-head: "Jost", "Jost Fallback", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-body: "Jost", "Jost Fallback", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --wrap: 1120px;
   --r: 10px;

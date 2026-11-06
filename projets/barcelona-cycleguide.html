@@ -2,11 +2,12 @@
 <html lang="fr" data-theme="auto" data-i18n-path="i18n/" data-i18n-prefix="bc.">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Barcelona CycleGuide · application mobile vocale assistée par IA | Harold Kamgang</title>
 <meta name="description" content="Conception et développement assistés par IA d'une application mobile vocale et géolocalisée : React Native, Firebase, moteur de géorepérage sur mesure, IA multilingue.">
 <link rel="canonical" href="https://kamgangharold-ui.github.io/projets/barcelona-cycleguide.html">
-<meta name="theme-color" content="#0A1128">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0A1128">
 
 <meta property="og:type" content="article">
 <meta property="og:title" content="Barcelona CycleGuide · application mobile vocale assistée par IA">
@@ -16,14 +17,16 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Barcelona CycleGuide · application mobile vocale assistée par IA">
+<meta name="twitter:description" content="React Native, Firebase, géorepérage maison, IA multilingue. Développement assisté par IA.">
 <meta name="twitter:image" content="https://kamgangharold-ui.github.io/assets/img/og.png">
 
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" href="../assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/fonts.css">
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/motion.css">
+<link rel="stylesheet" href="../assets/css/design.css">
 </head>
 
 <body>
@@ -32,8 +35,18 @@
 <header class="site-header">
   <nav class="nav" aria-label="Navigation principale">
     <a class="nav__brand" href="../"><span>Harold</span> Kamgang</a>
-    <ul class="nav__menu nav__menu--sub" id="navmenu">
-      <li><a href="../#projects" data-i18n="nav.back">← Toutes les réalisations</a></li>
+    <button class="nav__burger" id="burger" aria-expanded="false" aria-controls="navmenu" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__menu" id="navmenu">
+      <li><a href="../#about" data-i18n="nav.about">Profil</a></li>
+      <li><a href="../#path" data-i18n="nav.path">Parcours</a></li>
+      <li><a href="../#projects" class="is-on" aria-current="true" data-i18n="nav.projects">Réalisations</a></li>
+      <li><a href="../#skills" data-i18n="nav.skills">Compétences</a></li>
+      <li><a href="../#soft" data-i18n="nav.soft">Savoir-être</a></li>
+      <li><a href="../#education" data-i18n="nav.education">Formation</a></li>
+      <li><a href="../#contact" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <div class="nav__tools">
       <div class="langsel">
@@ -56,6 +69,7 @@
 <main id="main">
 
 <section class="hero hero--proj">
+  <div class="aurora" aria-hidden="true"><i></i><i></i></div>
   <div class="wrap">
     <p class="hero__kicker" data-i18n="bc.kicker">Développement produit · IA · Compétence transversale</p>
     <h1 class="proj__h1" data-i18n="bc.title">Barcelona CycleGuide : une application vocale qui guide, prévient et raconte</h1>
@@ -177,5 +191,7 @@
 
 <script src="../assets/js/i18n.js" defer></script>
 <script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/motion.js" defer></script>
+<script src="../assets/js/design.js" defer></script>
 </body>
 </html>

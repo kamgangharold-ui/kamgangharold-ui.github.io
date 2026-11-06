@@ -278,5 +278,12 @@
   "img.bc.6": "Parking search relies on the city's open data. Here, no free spot within 500 metres.",
   "img.k.1": "Tracking engine parameter trends, 2019 to 2021, the data series behind the 0.92 correlation.",
   "img.k.2": "Ishikawa diagram on the SENITEC unit's failures, sorted into five families of causes.",
-  "img.pa.1": "Process flow diagram of the studied process, from waste pretreatment to gas and pyrolysis oil treatment."
+  "img.pa.1": "Process flow diagram of the studied process, from waste pretreatment to gas and pyrolysis oil treatment.",
+  "nav.about": "Profile",
+  "nav.path": "Career",
+  "nav.projects": "Achievements",
+  "nav.skills": "Skills",
+  "nav.soft": "Soft skills",
+  "nav.education": "Education",
+  "nav.contact": "Contact"
 }
