@@ -278,5 +278,12 @@
   "img.bc.6": "La búsqueda de aparcamiento se basa en los datos abiertos de la ciudad. Aquí, ninguna plaza libre a menos de 500 metros.",
   "img.k.1": "Seguimiento de la evolución de los parámetros del motor, 2019-2021, la serie de datos detrás de la correlación de 0,92.",
   "img.k.2": "Diagrama de Ishikawa sobre los fallos de la unidad SENITEC, clasificados en cinco familias de causas.",
-  "img.pa.1": "Diagrama de flujo del proceso estudiado, desde el pretratamiento de los residuos hasta el tratamiento de los gases y el aceite de pirólisis."
+  "img.pa.1": "Diagrama de flujo del proceso estudiado, desde el pretratamiento de los residuos hasta el tratamiento de los gases y el aceite de pirólisis.",
+  "nav.about": "Perfil",
+  "nav.path": "Trayectoria",
+  "nav.projects": "Logros",
+  "nav.skills": "Competencias",
+  "nav.soft": "Saber ser",
+  "nav.education": "Formación",
+  "nav.contact": "Contacto"
 }

@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="auto" data-i18n-path="i18n/" data-i18n-prefix="py.">
+<html lang="fr" data-title-fr="Pyrolyse : valoriser les déchets de bois en biochar | Harold Kamgang" data-desc-fr="Projet tutoré en binôme : modélisation cinétique de la pyrolyse du bois par deux méthodes (Kissinger-Akahira-Sunose, Miura-Maki), régression R² = 0,975, conception d'un réacteur en deux parties." data-theme="auto" data-i18n-path="i18n/" data-i18n-prefix="py.">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pyrolyse : valoriser les déchets de bois en biochar | Harold Kamgang</title>
-<meta name="description" content="Projet tutoré en binôme : modélisation cinétique de la pyrolyse du bois par deux méthodes (Kissinger-Akahira-Sunose, Miura-Maki), régression R² = 0,975, conception d'un réacteur en deux parties.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pyrolysis: turning wood waste into biochar | Harold Kamgang</title>
+<meta name="description" content="Paired supervised project: kinetic modelling of wood pyrolysis using two methods (Kissinger-Akahira-Sunose, Miura-Maki), R² = 0.975 regression, design of a two-part reactor.">
 <link rel="canonical" href="https://kamgangharold-ui.github.io/projets/pyrolyse-dechets-bois.html">
-<meta name="theme-color" content="#0A1128">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0A1128">
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="Pyrolyse : valoriser les déchets de bois en biochar">
-<meta property="og:description" content="Modélisation cinétique par deux méthodes, régression R² = 0,975, conception d'un réacteur en deux parties. Projet en binôme.">
+<meta property="og:title" content="Pyrolysis: turning wood waste into biochar">
+<meta property="og:description" content="Paired supervised project: kinetic modelling of wood pyrolysis using two methods (Kissinger-Akahira-Sunose, Miura-Maki), R² = 0.975 regression, design of a two-part reactor.">
 <meta property="og:url" content="https://kamgangharold-ui.github.io/projets/pyrolyse-dechets-bois.html">
-<meta property="og:image" content="https://kamgangharold-ui.github.io/assets/img/og.png">
+<meta property="og:image" content="https://kamgangharold-ui.github.io/assets/img/og.png?v=20261106">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Harold Kamgang, COO at Tunora, process engineer. Operations, quality and international business.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://kamgangharold-ui.github.io/assets/img/og.png">
+<meta name="twitter:title" content="Pyrolysis: turning wood waste into biochar">
+<meta name="twitter:description" content="Paired supervised project: kinetic modelling of wood pyrolysis using two methods (Kissinger-Akahira-Sunose, Miura-Maki), R² = 0.975 regression, design of a two-part reactor.">
+<meta name="twitter:image" content="https://kamgangharold-ui.github.io/assets/img/og.png?v=20261106">
 
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" href="../assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/fonts.css">
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/motion.css">
+<link rel="stylesheet" href="../assets/css/design.css">
 </head>
 
 <body>
@@ -32,8 +36,18 @@
 <header class="site-header">
   <nav class="nav" aria-label="Navigation principale">
     <a class="nav__brand" href="../"><span>Harold</span> Kamgang</a>
-    <ul class="nav__menu nav__menu--sub" id="navmenu">
-      <li><a href="../#projects" data-i18n="nav.back">← Toutes les réalisations</a></li>
+    <button class="nav__burger" id="burger" aria-expanded="false" aria-controls="navmenu" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__menu" id="navmenu">
+      <li><a href="../#about" data-i18n="nav.about">Profil</a></li>
+      <li><a href="../#path" data-i18n="nav.path">Parcours</a></li>
+      <li><a href="../#projects" class="is-on" aria-current="true" data-i18n="nav.projects">Réalisations</a></li>
+      <li><a href="../#skills" data-i18n="nav.skills">Compétences</a></li>
+      <li><a href="../#soft" data-i18n="nav.soft">Savoir-être</a></li>
+      <li><a href="../#education" data-i18n="nav.education">Formation</a></li>
+      <li><a href="../#contact" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <div class="nav__tools">
       <div class="langsel">
@@ -56,6 +70,7 @@
 <main id="main">
 
 <section class="hero hero--proj">
+  <div class="aurora" aria-hidden="true"><i></i><i></i></div>
   <div class="wrap">
     <p class="hero__kicker" data-i18n="py.kicker">Environnement · Projet tutoré · SJP4 · En binôme</p>
     <h1 class="proj__h1" data-i18n="py.title">Pyrolyse : valoriser les déchets de bois en biochar</h1>
@@ -110,5 +125,7 @@
 
 <script src="../assets/js/i18n.js" defer></script>
 <script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/motion.js" defer></script>
+<script src="../assets/js/design.js" defer></script>
 </body>
 </html>

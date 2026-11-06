@@ -11,7 +11,7 @@
 
   /* ── 1. Marquer les éléments à faire apparaître ───────────── */
   var cibles = document.querySelectorAll(
-    '.card, .sk, .tl__i, .sec__t, .deliv > li, .meta > li, .callout, .prose > h2'
+    '.card, .sk, .tl__i, .sec__t, .deliv > li, .callout, .prose > h2, .proj-fig, .proj-gallery figure, .backlink'
   );
 
   if (calme) {

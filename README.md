@@ -4,7 +4,7 @@ Harold Kamgang's personal site, <https://kamgangharold-ui.github.io>
 
 ## What it does
 
-Single page, plain HTML/CSS/JS, no build step. Four languages (FR/EN/ES/DE), dark mode, no tracker or cookie. Palette (November 2026, kept calm): the CV navy `#0A1128` as ground, one cool accent, the site teal (`#1A6E8E` on light, `#56A7C4` on dark), white and soft grey text. No other hue. Roboto Condensed.
+Single page, plain HTML/CSS/JS, no build step. Four languages (FR/EN/ES/DE), dark mode, no tracker or cookie. Palette (November 2026, kept calm): the CV navy `#0A1128` as ground, one cool accent, the site teal (`#1A6E8E` on light, `#56A7C4` on dark), white and soft grey text. No other hue. One typeface, Jost (SIL OFL 1.1), self hosted.
 
 ---
 
@@ -48,6 +48,7 @@ projets/*.html                 4 project pages (French) + markup
 assets/css/style.css          styles, light and dark theme, language menu
 assets/js/i18n.js             FR/EN/ES/DE switch (dropdown, 4 languages)
 assets/js/main.js             theme, menu, protected email, form
+assets/css/fonts.css          @font-face for Jost (2 woff2 files in assets/fonts/, licence in assets/fonts/OFL-Jost.txt) and its metric matched fallback
 assets/css/design.css         design pass of November 2026: hero aurora, counters, ticker, final call (index.html only)
 assets/js/design.js           sticky header state, counters, aurora parallax, timeline fill (index.html only, off under reduced motion)
 assets/i18n/{en,es,de}.json    translations of index.html
@@ -57,6 +58,8 @@ robots.txt · sitemap.xml
 ```
 
 ## Design pass (November 2026)
+
+The six pages in `projets/` use the same system as the home page: same header with the full menu, language switch and theme toggle, same hero stage, reveal, cards, footer and fonts. `style.css`, `motion.css`, `design.css`, `fonts.css` and the scripts are shared, nothing is copied into a page. A page needs: the two `fonts` lines, the three stylesheets, `<div class="aurora">` as the first child of its hero, and the four scripts. The menu labels of the sub pages come from `projets/i18n/*.json` (keys `nav.*`).
 
 All of it lives in `assets/css/design.css` and `assets/js/design.js`, loaded only by `index.html`. Remove their two lines from the `<head>` and the end of `<body>` to go back to the previous look. Rules held everywhere: only `transform` and `opacity` are animated, `prefers-reduced-motion: reduce` turns every animation off (counters show their final value at once), hover styles sit behind `(hover: hover) and (pointer: fine)`, no library and no extra font. The language switch cross fades through the View Transitions API where the browser has it, and swaps the text directly elsewhere. Counters end on the exact printed value, and the numbers in the HTML stay the source of truth.
 

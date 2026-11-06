@@ -1,0 +1,23 @@
+/* ═══════════════════════════════════════════════════════════════════
+   fonts.css : une seule famille, Jost (licence SIL OFL 1.1, voir assets/fonts/OFL-Jost.txt),
+   hébergée ici, deux fichiers woff2 variables (graisses 300 à 700).
+   Remplace la requête vers Google Fonts : aucune connexion tierce.
+   Le sous-ensemble « latin » couvre le français, l'espagnol et l'allemand ;
+   « latin-ext » ne se télécharge que si un caractère étendu apparaît.
+   ═══════════════════════════════════════════════════════════════════ */
+@font-face {
+  font-family: "Jost"; font-style: normal; font-weight: 300 700; font-display: swap;
+  src: url("../fonts/jost-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Jost"; font-style: normal; font-weight: 300 700; font-display: swap;
+  src: url("../fonts/jost-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Police de secours aux métriques de Jost : le texte ne bouge pas quand Jost arrive.
+   Mesuré dans Chrome : largeur moyenne 96 % de celle d'Arial, ascendante 1,07, descendante 0,38. */
+@font-face {
+  font-family: "Jost Fallback"; src: local("Arial"), local("Helvetica Neue"), local("Liberation Sans");
+  size-adjust: 96%; ascent-override: 111.5%; descent-override: 39.6%; line-gap-override: 0%;
+}

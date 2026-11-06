@@ -278,5 +278,12 @@
   "img.bc.6": "Die Parkplatzsuche stützt sich auf die offenen Daten der Stadt. Hier: kein freier Platz innerhalb von 500 Metern.",
   "img.k.1": "Verlaufsverfolgung der Motorparameter, 2019 bis 2021, die Datenreihe hinter der Korrelation von 0,92.",
   "img.k.2": "Ishikawa-Diagramm zu den Ausfällen der SENITEC-Anlage, gegliedert in fünf Ursachenfamilien.",
-  "img.pa.1": "Verfahrensfließbild des untersuchten Prozesses, von der Abfallvorbehandlung bis zur Behandlung von Gasen und Pyrolyseöl."
+  "img.pa.1": "Verfahrensfließbild des untersuchten Prozesses, von der Abfallvorbehandlung bis zur Behandlung von Gasen und Pyrolyseöl.",
+  "nav.about": "Profil",
+  "nav.path": "Werdegang",
+  "nav.projects": "Erfolge",
+  "nav.skills": "Kompetenzen",
+  "nav.soft": "Soft Skills",
+  "nav.education": "Ausbildung",
+  "nav.contact": "Kontakt"
 }
