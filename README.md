@@ -16,7 +16,7 @@ Single page, plain HTML/CSS/JS, no build step. Four languages (FR/EN/ES/DE), dar
 | Its English / Spanish / German translation | `assets/i18n/en.json` (or `es.json`, `de.json`), under the matching `data-i18n` key |
 | A project page's translations | `projets/i18n/en.json` (or `es.json`, `de.json`): one file shared by all 4 pages, each key prefixed (`p.`, `k.`, `pa.`, `bc.`) |
 | The colors | the variables at the top of `assets/css/style.css` |
-| The downloadable CV | replace `cv/CV-Harold-KAMGANG-QSE.pdf` |
+| The downloadable CV | replace `cv/CV-Harold-KAMGANG-FR.pdf` and `cv/CV-Harold-KAMGANG-EN.pdf` |
 
 French exists **only once**, inside the HTML: it is collected from the page on load, so there is no `fr.json` to keep in sync. Every translatable text carries a `data-i18n="key"` attribute, and that key must exist in **all three** of `en.json`, `es.json` and `de.json`, or French leaks into a language where the key is missing (`i18n.js` falls back to French if the JSON itself fails to load, but a key missing inside a valid JSON silently lets the French text collected at load time show through).
 
@@ -76,7 +76,7 @@ Check before every publish:
 
 ```bash
 grep -rniE "\+33|\+34|@gmail" --include="*.html" --include="*.js" --include="*.json" .
-pdftotext cv/CV-Harold-KAMGANG-QSE.pdf - | grep -iE "\+33|\+34|@gmail"
+for f in cv/*.pdf; do pdftotext "$f" - | grep -iE "\+33|\+34|@gmail"; done
 ```
 
 ## Accuracy
