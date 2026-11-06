@@ -2,12 +2,13 @@
 <html lang="fr" data-theme="auto">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Harold Kamgang · COO chez Tunora, ingénieur procédés</title>
 <meta name="description" content="COO chez Tunora, ingénieur procédés, double diplôme MSc International Business et MBA. 19 mois sans accident du travail sur un site industriel de 70 personnes, 8 % de pertes en moins en 6 mois.">
 <link rel="canonical" href="https://kamgangharold-ui.github.io/">
 <meta name="author" content="Harold Kamgang">
-<meta name="theme-color" content="#0A1128">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0A1128">
 
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Harold Kamgang · COO chez Tunora, ingénieur procédés">
@@ -38,6 +39,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/motion.css">
+<link rel="stylesheet" href="assets/css/design.css">
 
 <script type="application/ld+json">
 {
@@ -83,7 +85,7 @@
 
     <div class="nav__tools">
       <div class="langsel">
-        <button class="pill" id="lang" aria-haspopup="listbox" aria-expanded="false" aria-label="Choisir la langue (actuelle : FR)"><span aria-hidden="true">FR</span></button>
+        <button class="pill" id="lang" aria-haspopup="listbox" aria-expanded="false" aria-label="FR, choisir la langue"><span aria-hidden="true">FR</span></button>
         <ul class="langsel__menu" id="langmenu" role="listbox" hidden>
           <li class="langsel__opt is-current" role="option" data-lang="fr" tabindex="0" aria-selected="true">FR</li>
           <li class="langsel__opt" role="option" data-lang="en" tabindex="0" aria-selected="false">EN</li>
@@ -103,6 +105,7 @@
 
 <!-- ══════════════ ACCUEIL ══════════════ -->
 <section class="hero" id="top">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="wrap hero__grid">
     <div class="hero__text">
       <p class="hero__kicker" data-i18n="hero.kicker">Opérations · Procédés · Business international</p>
@@ -127,6 +130,14 @@
     </ul>
   </div>
 </section>
+
+<!-- Bandeau décoratif : les méthodes et outils déjà cités dans Compétences -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>ISO 9001:2015</span><span>HACCP</span><span>Lean</span><span>5S</span><span>Ishikawa</span><span>PDCA</span><span>Pareto</span><span>3x8</span><span>Sage X3</span><span>Power BI</span><span>MS Project</span><span>AutoCAD</span>
+    <span>ISO 9001:2015</span><span>HACCP</span><span>Lean</span><span>5S</span><span>Ishikawa</span><span>PDCA</span><span>Pareto</span><span>3x8</span><span>Sage X3</span><span>Power BI</span><span>MS Project</span><span>AutoCAD</span>
+  </div>
+</div>
 
 <!-- ══════════════ PROFIL ══════════════ -->
 <section class="sec" id="about">
@@ -505,6 +516,7 @@
 
 <!-- ══════════════ CONTACT ══════════════ -->
 <section class="sec sec--cta" id="contact">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="wrap">
     <h2 class="sec__t sec__t--light"><span class="sec__n">08</span><span data-i18n="ct.h">Parlons-en</span></h2>
     <p class="ct__lead" data-i18n="ct.lead">Un projet, un partenariat, une question sur Tunora ou sur mon parcours : le plus simple est de m'écrire ici. Je réponds sous 8 heures.</p>
@@ -555,5 +567,6 @@
 <script src="assets/js/i18n.js" defer></script>
 <script src="assets/js/main.js" defer></script>
 <script src="assets/js/motion.js" defer></script>
+<script src="assets/js/design.js" defer></script>
 </body>
 </html>

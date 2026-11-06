@@ -48,11 +48,17 @@ projets/*.html                 4 project pages (French) + markup
 assets/css/style.css          styles, light and dark theme, language menu
 assets/js/i18n.js             FR/EN/ES/DE switch (dropdown, 4 languages)
 assets/js/main.js             theme, menu, protected email, form
+assets/css/design.css         design pass of November 2026: hero aurora, counters, ticker, final call (index.html only)
+assets/js/design.js           sticky header state, counters, aurora parallax, timeline fill (index.html only, off under reduced motion)
 assets/i18n/{en,es,de}.json    translations of index.html
 projets/i18n/{en,es,de}.json   shared translations of the 4 project pages
 cv/                            public CV (no direct contact details)
 robots.txt · sitemap.xml
 ```
+
+## Design pass (November 2026)
+
+All of it lives in `assets/css/design.css` and `assets/js/design.js`, loaded only by `index.html`. Remove their two lines from the `<head>` and the end of `<body>` to go back to the previous look. Rules held everywhere: only `transform` and `opacity` are animated, `prefers-reduced-motion: reduce` turns every animation off (counters show their final value at once), hover styles sit behind `(hover: hover) and (pointer: fine)`, no library and no extra font. The language switch cross fades through the View Transitions API where the browser has it, and swaps the text directly elsewhere. Counters end on the exact printed value, and the numbers in the HTML stay the source of truth.
 
 ## Tracking
 
