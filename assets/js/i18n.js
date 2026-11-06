@@ -29,9 +29,10 @@
   var titleKey = metaPrefix + "meta.title";
   var descKey = metaPrefix + "meta.desc";
 
-  base[titleKey] = document.title;
+  // Les balises par défaut (partage, moteurs de recherche) sont en anglais ; le français vient des attributs data-*.
+  base[titleKey] = document.documentElement.dataset.titleFr || document.title;
   var metaDesc = document.querySelector('meta[name="description"]');
-  base[descKey] = metaDesc ? metaDesc.content : "";
+  base[descKey] = document.documentElement.dataset.descFr || (metaDesc ? metaDesc.content : "");
 
   function paint(lang) {
     var d = dict[lang];
@@ -108,7 +109,7 @@
   // Le français doit passer par paint() lui aussi : c'est là que la préférence
   // est enregistrée. Sans ça, un choix « français » n'était jamais mémorisé et
   // la page repassait dans la langue du navigateur au rechargement suivant.
-  load(wanted || "fr");
+  load(wanted || "en");   // langue du navigateur non prise en charge : anglais
 
   // ── Menu déroulant à 4 langues ────────────────────────────────────────
   var btn = document.getElementById("lang");
