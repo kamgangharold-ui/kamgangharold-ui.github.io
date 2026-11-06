@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="fr" data-title-fr="Pyrolyse : valoriser les déchets de bois en biochar | Harold Kamgang" data-desc-fr="Projet tutoré en binôme : modélisation cinétique de la pyrolyse du bois par deux méthodes (Kissinger-Akahira-Sunose, Miura-Maki), régression R² = 0,975, conception d'un réacteur en deux parties." data-theme="auto" data-i18n-path="i18n/" data-i18n-prefix="py.">
+<html lang="fr" data-title-fr="Pyrolyse : valoriser les déchets de bois en biochar | Harold Kamgang" data-desc-fr="Projet tutoré en binôme : pyrolyse de déchets de bois, planning et budget de 98 000 FCFA, modélisation cinétique par deux méthodes (R² = 0,975), conception d'un réacteur en deux parties." data-theme="auto" data-i18n-path="i18n/" data-i18n-prefix="py.">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Pyrolysis: turning wood waste into biochar | Harold Kamgang</title>
-<meta name="description" content="Paired supervised project: kinetic modelling of wood pyrolysis using two methods (Kissinger-Akahira-Sunose, Miura-Maki), R² = 0.975 regression, design of a two-part reactor.">
+<meta name="description" content="Paired supervised project: wood pyrolysis, a schedule and a 98,000 FCFA budget, kinetic modelling with two methods (R² = 0.975), design of a two-part reactor.">
 <link rel="canonical" href="https://kamgangharold-ui.github.io/projets/pyrolyse-dechets-bois.html">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0A1128">
 
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pyrolysis: turning wood waste into biochar">
-<meta property="og:description" content="Paired supervised project: kinetic modelling of wood pyrolysis using two methods (Kissinger-Akahira-Sunose, Miura-Maki), R² = 0.975 regression, design of a two-part reactor.">
+<meta property="og:description" content="Paired supervised project: wood pyrolysis, a schedule and a 98,000 FCFA budget, kinetic modelling with two methods (R² = 0.975), design of a two-part reactor.">
 <meta property="og:url" content="https://kamgangharold-ui.github.io/projets/pyrolyse-dechets-bois.html">
 <meta property="og:image" content="https://kamgangharold-ui.github.io/assets/img/og.png?v=20261106">
 <meta property="og:image:width" content="1200">
@@ -19,7 +19,7 @@
 <meta property="og:image:alt" content="Harold Kamgang, COO at Tunora, process engineer. Operations, quality and international business.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pyrolysis: turning wood waste into biochar">
-<meta name="twitter:description" content="Paired supervised project: kinetic modelling of wood pyrolysis using two methods (Kissinger-Akahira-Sunose, Miura-Maki), R² = 0.975 regression, design of a two-part reactor.">
+<meta name="twitter:description" content="Paired supervised project: wood pyrolysis, a schedule and a 98,000 FCFA budget, kinetic modelling with two methods (R² = 0.975), design of a two-part reactor.">
 <meta name="twitter:image" content="https://kamgangharold-ui.github.io/assets/img/og.png?v=20261106">
 
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
@@ -72,14 +72,14 @@
 <section class="hero hero--proj">
   <div class="aurora" aria-hidden="true"><i></i><i></i></div>
   <div class="wrap">
-    <p class="hero__kicker" data-i18n="py.kicker">Environnement · Projet tutoré · SJP4 · En binôme</p>
+    <p class="hero__kicker" data-i18n="py.kicker">Pilotage de projet · Données · Projet tutoré</p>
     <h1 class="proj__h1" data-i18n="py.title">Pyrolyse : valoriser les déchets de bois en biochar</h1>
-    <p class="hero__role" data-i18n="py.sub">Modéliser une réaction chimique avec un réacteur construit à la main et une carte Arduino</p>
+    <p class="hero__role" data-i18n="py.sub">Mené comme un vrai projet : objectifs, jalons, calendrier, budget de 98 000 FCFA, et un réacteur construit à la main</p>
 
     <ul class="meta">
       <li><b data-i18n="py.m1.k">Cadre</b><span data-i18n="py.m1.v">Projet tutoré, Saint-Jérôme Polytechnique (SJP4, génie des procédés)</span></li>
       <li><b data-i18n="py.m2.k">Équipe</b><span data-i18n="py.m2.v">En binôme avec Vannick Baombé</span></li>
-      <li><b data-i18n="py.m3.k">Période</b><span data-i18n="py.m3.v">Mars – juillet 2021</span></li>
+      <li><b data-i18n="py.m3.k">Période</b><span data-i18n="py.m3.v">Mars à juillet 2021</span></li>
       <li><b data-i18n="py.m4.k">Encadrement</b><span data-i18n="py.m4.v">Mme Kobbe Dama Nathalie, enseignante-chercheuse</span></li>
     </ul>
   </div>
@@ -88,29 +88,76 @@
 <section class="sec">
   <div class="wrap prose prose--proj">
 
-    <h2 data-i18n="py.h1">Le problème</h2>
-    <p data-i18n="py.p1">Les déchets de bois traités et non traités représentent environ <b>27 % du gisement de déchets dangereux au Cameroun</b>, soit près de 200 000 m³ transportés en décharge chaque année. Notre question : peut-on transformer ce déchet en une ressource énergétique, le biochar, plutôt que de l'enfouir ?</p>
+    <h2 data-i18n="py.b1">Le problème</h2>
 
-    <h2 data-i18n="py.h2">Le dispositif</h2>
-    <p data-i18n="py.p2">Nous avons construit un réacteur à lit fixe à l'échelle laboratoire, alimenté en copeaux de <i>Pterocarpus erinaceus</i> (bois de vène), et instrumenté nous-mêmes : un capteur de masse et un capteur de température (PT100) reliés à une carte Arduino, câblage simulé au préalable sur Proteus 8 pour vérifier le montage avant de le construire.</p>
+    <p data-i18n="py.b2">Le bois, traité ou non, représente environ <b>27 % des déchets dangereux du Cameroun</b>, près de 200 000 m³ mis en décharge chaque année. Peut-on en faire du biochar plutôt que de l'enterrer ?</p>
 
-    <h2 data-i18n="py.h3">La modélisation cinétique</h2>
-    <p data-i18n="py.p3">Pendant l'essai, nous avons suivi la masse et la température de l'échantillon toutes les cinq à quinze minutes, de la température ambiante jusqu'à plus de 550 °C. Nous en avons tiré la vitesse de chauffe du réacteur : <b>33,6 K par minute</b>.</p>
-    <p data-i18n="py.p4">À partir de ces données, nous avons calculé l'énergie d'activation de la réaction par deux méthodes de référence de la littérature, pour pouvoir comparer les résultats entre elles :</p>
-    <ul class="deliv">
-      <li><b data-i18n="py.d1.k">Kissinger-Akahira-Sunose</b><span data-i18n="py.d1.v">Énergie d'activation : 0,81 kJ/mol</span></li>
-      <li><b data-i18n="py.d2.k">Miura-Maki</b><span data-i18n="py.d2.v">Énergie d'activation : 1,31 kJ/mol</span></li>
-    </ul>
-    <p data-i18n="py.p5">La régression tracée pour obtenir ces paramètres (ln(β/T²) en fonction de 1/T) affiche un coefficient de détermination <b>R² = 0,975</b>, un ajustement linéaire net sur l'ensemble des points mesurés.</p>
+    <h2 data-i18n="py.b3">Un projet piloté</h2>
 
-    <h2 data-i18n="py.h4">Ce que nous avons proposé</h2>
-    <p data-i18n="py.p6">Une géométrie de réacteur en deux parties, un four et une chambre d'alimentation de la biomasse, avec une fiole de condensation ajoutée pour capturer les gaz condensables plutôt que de les laisser s'échapper. Le volet le plus intéressant n'était pas la transformation elle-même mais son revers : la pyrolyse dégage des gaz nocifs, et nous avons choisi d'intégrer leur traitement au projet plutôt que de le laisser hors périmètre.</p>
+    <p data-i18n="py.b4">Nous l'avons mené comme un projet, pas comme une expérience improvisée : objectifs, jalons, un calendrier de mars à juillet et un budget de 98 000 FCFA, fixés dès le départ.</p>
 
-    <h2 data-i18n="py.h5">Ce que ce travail nous a appris</h2>
-    <p data-i18n="py.p7">Mener une cinétique chimique de bout en bout, du montage électronique jusqu'à la comparaison de deux modèles mathématiques, sans laboratoire d'analyse thermogravimétrique conventionnel : construire l'instrument avant de pouvoir mesurer le phénomène. Projet mené avec objectifs, jalons, calendrier et budget définis dès le départ, pas seulement une expérimentation en cours de route.</p>
+    <figure class="proj-fig">
+        <a href="../assets/img/projets/pyro-planning.webp" data-lightbox>
+          <img src="../assets/img/projets/pyro-planning.webp" alt="Planification du projet : tâches, antériorités et calendrier hebdomadaire de mars à juillet." data-i18n-alt="alt.pyro-planning" loading="lazy" width="1058" height="870">
+        </a>
+        <figcaption data-i18n="img.pyro-planning">Planification du projet : tâches, antériorités et calendrier hebdomadaire de mars à juillet. Source : rapport du projet tutoré SJP4, figure 2 et tableau 1.</figcaption>
+      </figure>
 
-    <p class="backlink"><a href="parcours-academique.html" data-i18n="py.back1">→ Voir tout mon parcours d'ingénieur, projet par projet</a></p>
-    <p class="backlink"><a href="../#projects" data-i18n="p.back">← Retour à toutes les réalisations</a></p>
+    <figure class="proj-fig">
+        <a href="../assets/img/projets/pyro-budget.webp" data-lightbox>
+          <img src="../assets/img/projets/pyro-budget.webp" alt="Budget du projet : dispositif, plaque métallique, capteurs, transport, imprévus, 98 000 FCFA au total." data-i18n-alt="alt.pyro-budget" loading="lazy" width="1058" height="749">
+        </a>
+        <figcaption data-i18n="img.pyro-budget">Budget du projet : dispositif, plaque métallique, capteurs, transport, imprévus, 98 000 FCFA au total. Source : rapport du projet tutoré SJP4, tableau 2.</figcaption>
+      </figure>
+
+    <h2 data-i18n="py.b5">Le montage</h2>
+
+    <p data-i18n="py.b6">Un réacteur de laboratoire à lit fixe, alimenté en copeaux de bois de vène, que nous avons instrumenté nous-mêmes : un capteur de masse et un capteur de température PT100 reliés à une carte Arduino, avec le câblage simulé d'abord dans Proteus 8 pour vérifier le circuit avant de le construire.</p>
+
+    <figure class="proj-fig">
+        <a href="../assets/img/projets/pyro-bois.webp" data-lightbox>
+          <img src="../assets/img/projets/pyro-bois.webp" alt="Quelques-unes des essences de bois étudiées." data-i18n-alt="alt.pyro-bois" loading="lazy" width="1058" height="361">
+        </a>
+        <figcaption data-i18n="img.pyro-bois">Quelques-unes des essences de bois étudiées. Source : rapport du projet tutoré SJP4, figure 4.</figcaption>
+      </figure>
+
+    <figure class="proj-fig">
+        <a href="../assets/img/projets/pyro-dechets.webp" data-lightbox>
+          <img src="../assets/img/projets/pyro-dechets.webp" alt="Les déchets de bois utilisés pour l'essai." data-i18n-alt="alt.pyro-dechets" loading="lazy" width="662" height="543">
+        </a>
+        <figcaption data-i18n="img.pyro-dechets">Les déchets de bois utilisés pour l'essai. Source : rapport du projet tutoré SJP4, figure 18.</figcaption>
+      </figure>
+
+    <figure class="proj-fig">
+        <a href="../assets/img/projets/pyro-reacteur.webp" data-lightbox>
+          <img src="../assets/img/projets/pyro-reacteur.webp" alt="Vue isométrique de la géométrie du réacteur, coupé en deux parties : le four et la chambre d'alimentation." data-i18n-alt="alt.pyro-reacteur" loading="lazy" width="1100" height="1109">
+        </a>
+        <figcaption data-i18n="img.pyro-reacteur">Vue isométrique de la géométrie du réacteur, coupé en deux parties : le four et la chambre d'alimentation. Source : rapport du projet tutoré SJP4, géométrie du réacteur.</figcaption>
+      </figure>
+
+    <h2 data-i18n="py.b7">Les résultats</h2>
+
+    <p data-i18n="py.b8">Masse et température relevées toutes les cinq à quinze minutes, de la température ambiante à plus de 550 °C : vitesse de chauffe de <b>33,6 K par minute</b>. Nous avons calculé l'énergie d'activation par deux méthodes de référence, pour qu'elles se contrôlent l'une l'autre : Kissinger-Akahira-Sunose 0,81 kJ/mol et Miura-Maki 1,31 kJ/mol. La régression donne un coefficient de détermination de <b>R² = 0,975</b>.</p>
+
+    <figure class="proj-fig">
+        <a href="../assets/img/projets/pyro-temperature.webp" data-lightbox>
+          <img src="../assets/img/projets/pyro-temperature.webp" alt="Température relevée au fil du temps pendant le traitement thermique." data-i18n-alt="alt.pyro-temperature" loading="lazy" width="1084" height="711">
+        </a>
+        <figcaption data-i18n="img.pyro-temperature">Température relevée au fil du temps pendant le traitement thermique. Source : rapport du projet tutoré SJP4, page 37.</figcaption>
+      </figure>
+
+    <h2 data-i18n="py.b9">Ce que nous avons proposé</h2>
+
+    <p data-i18n="py.b10">Un réacteur en deux parties, un four et une chambre d'alimentation, avec un flacon de condensation pour capter les gaz condensables. Le traitement des gaz nocifs fait partie du projet : nous ne l'avons pas laissé hors périmètre.</p>
+
+    <div class="callout">
+      <p data-i18n="py.b11">Ce que j'en retiens pour piloter des opérations : on ne mesure pas un phénomène sans instrument, alors on construit l'instrument, et on tient le tout avec des objectifs, des jalons et un budget.</p>
+    </div>
+
+    <p class="backlink"><a href="parcours-academique.html" data-i18n="py.b12">→ Mon parcours d'ingénieur, projet par projet</a></p>
+
+    <p class="backlink"><a href="../#projects" data-i18n="py.b13">← Retour à toutes les réalisations</a></p>
+
   </div>
 </section>
 
@@ -127,5 +174,6 @@
 <script src="../assets/js/main.js" defer></script>
 <script src="../assets/js/motion.js" defer></script>
 <script src="../assets/js/design.js" defer></script>
+<script src="../assets/js/lightbox.js" defer></script>
 </body>
 </html>
