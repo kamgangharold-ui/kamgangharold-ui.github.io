@@ -68,7 +68,7 @@
   function majBarre() {
     var h = document.documentElement.scrollHeight - window.innerHeight;
     var p = h > 0 ? (window.scrollY / h) * 100 : 0;
-    barre.style.width = p + '%';
+    barre.style.transform = 'scaleX(' + (p / 100).toFixed(4) + ')';
     tick = false;
   }
   window.addEventListener('scroll', function () {

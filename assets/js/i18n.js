@@ -52,7 +52,7 @@
     if (btn) {
       var span = btn.querySelector("span");
       if (span) span.textContent = LABELS[lang];
-      btn.setAttribute("aria-label", "Choisir la langue (actuelle : " + LABELS[lang] + ")");
+      btn.setAttribute("aria-label", LABELS[lang] + ", choisir la langue");
     }
     Array.prototype.slice.call(document.querySelectorAll(".langsel__opt")).forEach(function (opt) {
       opt.classList.toggle("is-current", opt.dataset.lang === lang);
@@ -66,14 +66,28 @@
   // chemin de dictionnaire via <html data-i18n-path="...">.
   var basePath = document.documentElement.dataset.i18nPath || "assets/i18n/";
 
+  // Changement de langue : fondu enchaîné de toute la page (View Transitions), sauf au
+  // premier affichage et si l'utilisateur demande moins d'animations. Sans le navigateur
+  // adapté, le texte change simplement, comme avant.
+  var animate = false;
+  function swap(lang) {
+    var calme = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (animate && !calme && document.startViewTransition) {
+      document.startViewTransition(function () { paint(lang); });
+    } else {
+      paint(lang);
+    }
+    animate = true;
+  }
+
   function load(lang) {
-    if (lang === "fr") { paint("fr"); return; }
-    if (dict[lang]) { paint(lang); return; }
+    if (lang === "fr") { swap("fr"); return; }
+    if (dict[lang]) { swap(lang); return; }
     // "reload" force une revalidation reseau : sans ca, un texte corrige restait invisible
     // des heures chez un visiteur ayant deja charge la page, contrairement au francais (HTML).
     fetch(basePath + lang + ".json", { cache: "reload" })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (json) { dict[lang] = json; paint(lang); })
+      .then(function (json) { dict[lang] = json; swap(lang); })
       .catch(function () {
         // Traduction indisponible : on reste en français plutôt que d'afficher une page cassée.
         paint("fr");
