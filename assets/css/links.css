@@ -1,0 +1,25 @@
+/* Page /links/ : une colonne, une grille de logos, mêmes couleurs que le site. */
+body.lk { min-height: 100vh; min-height: 100svh; display: grid; place-items: center;
+  padding: 2.2rem 1.25rem; background: var(--bg-alt); }
+.lk__card { width: min(100%, 460px); text-align: center; }
+.lk__photo { width: 112px; height: 112px; border-radius: 50%; object-fit: cover;
+  border: 3px solid var(--surface); box-shadow: var(--sh); }
+.lk__name { font-size: 2rem; font-weight: 400; margin: .9rem 0 .1rem; }
+.lk__name strong { font-weight: 700; }
+.lk__role { margin: 0 0 1.6rem; color: var(--txt-2); font-size: 1rem; }
+
+.lk__grid { list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; }
+.lk__a { display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: .5rem; min-height: 92px; padding: .9rem .4rem; color: var(--head); text-decoration: none;
+  font-size: .86rem; background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r); box-shadow: var(--sh); transition: border-color .15s, color .15s; }
+.lk__a svg { width: 30px; height: 30px; fill: currentColor; }
+.lk__a:hover { border-color: var(--accent); color: var(--accent); }
+
+.lk__site { display: block; margin-top: 1rem; padding: .85rem 1rem; color: #fff;
+  font-weight: 600; text-decoration: none; background: var(--teal); border-radius: var(--r); }
+.lk__site:hover { background: var(--navy); }
+.lk__note { margin: 1.4rem 0 0; font-size: .82rem; color: var(--txt-2); }
+
+@media (max-width: 340px) { .lk__grid { grid-template-columns: repeat(2, 1fr); } }

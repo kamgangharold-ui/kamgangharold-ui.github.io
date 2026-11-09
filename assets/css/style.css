@@ -327,6 +327,10 @@ html[data-theme="dark"] .sec--cta { background: var(--bg-alt); }
 .foot { background: var(--bg-alt); border-top: 1px solid var(--line); padding: 1.6rem 0; }
 .foot__in { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .6rem; }
 .foot p { margin: 0; font-size: .88rem; color: var(--txt-2); }
+.foot__social { display: flex; flex-wrap: wrap; gap: .3rem; margin: 0; padding: 0; list-style: none; }
+.foot__social a { display: grid; place-items: center; width: 40px; height: 40px; color: var(--txt-2); border-radius: 8px; }
+.foot__social a:hover { color: var(--accent); background: var(--surface); }
+.foot__social svg { width: 20px; height: 20px; fill: currentColor; }
 
 /* ───────── Adaptatif ───────── */
 @media (max-width: 900px) {

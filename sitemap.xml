@@ -21,4 +21,10 @@
   <url><loc>https://kamgangharold-ui.github.io/projets/kribi-eaux-huileuses.html</loc><lastmod>2026-08-29</lastmod></url>
   <url><loc>https://kamgangharold-ui.github.io/projets/parcours-academique.html</loc><lastmod>2026-08-29</lastmod></url>
   <url><loc>https://kamgangharold-ui.github.io/projets/barcelona-cycleguide.html</loc><lastmod>2026-08-29</lastmod></url>
+  <url>
+    <loc>https://kamgangharold-ui.github.io/links/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
