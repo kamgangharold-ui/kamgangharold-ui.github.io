@@ -11,7 +11,7 @@
 
   /* ── 1. Marquer les éléments à faire apparaître ───────────── */
   var cibles = document.querySelectorAll(
-    '.card, .sk, .tl__i, .sec__t, .deliv > li, .meta > li, .callout, .prose > h2'
+    '.card, .sk, .tl__i, .sec__t, .deliv > li, .callout, .prose > h2, .proj-fig, .proj-gallery figure, .backlink'
   );
 
   if (calme) {
@@ -68,7 +68,7 @@
   function majBarre() {
     var h = document.documentElement.scrollHeight - window.innerHeight;
     var p = h > 0 ? (window.scrollY / h) * 100 : 0;
-    barre.style.width = p + '%';
+    barre.style.transform = 'scaleX(' + (p / 100).toFixed(4) + ')';
     tick = false;
   }
   window.addEventListener('scroll', function () {

@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="auto" data-i18n-path="i18n/" data-i18n-prefix="cm.">
+<html lang="fr" data-title-fr="Compostage : valoriser les déchets d'une torréfaction de café | Harold Kamgang" data-desc-fr="Rapport de stage chez Brûlerie Moderne : 2 794 kg de déchets non valorisés par an, un essai de compostage sur six récipients, une étude économique à 30 000 FCFA de marge par tonne." data-theme="auto" data-i18n-path="i18n/" data-i18n-prefix="cm.">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Compostage : valoriser les déchets d'une torréfaction de café | Harold Kamgang</title>
-<meta name="description" content="Rapport de stage à la Brûlerie Moderne : 2 794 kg de déchets non valorisés par an, test de compostage sur six récipients, étude économique chiffrant 30 000 FCFA de marge par tonne.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Composting: recovering value from a coffee roaster's waste | Harold Kamgang</title>
+<meta name="description" content="Internship report at Brûlerie Moderne: 2,794 kg of unrecovered waste per year, a composting trial across six containers, an economic case at 30,000 FCFA of margin per tonne.">
 <link rel="canonical" href="https://kamgangharold-ui.github.io/projets/compostage-brulerie-moderne.html">
-<meta name="theme-color" content="#0A1128">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0A1128">
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="Compostage : valoriser les déchets d'une torréfaction de café">
-<meta property="og:description" content="2 794 kg de déchets non valorisés par an, test de compostage sur six récipients, 30 000 FCFA de marge par tonne.">
+<meta property="og:title" content="Composting: recovering value from a coffee roaster's waste">
+<meta property="og:description" content="Internship report at Brûlerie Moderne: 2,794 kg of unrecovered waste per year, a composting trial across six containers, an economic case at 30,000 FCFA of margin per tonne.">
 <meta property="og:url" content="https://kamgangharold-ui.github.io/projets/compostage-brulerie-moderne.html">
-<meta property="og:image" content="https://kamgangharold-ui.github.io/assets/img/og.png">
+<meta property="og:image" content="https://kamgangharold-ui.github.io/assets/img/og.png?v=20261106">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Harold Kamgang, COO at Tunora, process engineer. Operations, quality and international business.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://kamgangharold-ui.github.io/assets/img/og.png">
+<meta name="twitter:title" content="Composting: recovering value from a coffee roaster's waste">
+<meta name="twitter:description" content="Internship report at Brûlerie Moderne: 2,794 kg of unrecovered waste per year, a composting trial across six containers, an economic case at 30,000 FCFA of margin per tonne.">
+<meta name="twitter:image" content="https://kamgangharold-ui.github.io/assets/img/og.png?v=20261106">
 
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" href="../assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/fonts.css">
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/motion.css">
+<link rel="stylesheet" href="../assets/css/design.css">
 </head>
 
 <body>
@@ -32,8 +36,18 @@
 <header class="site-header">
   <nav class="nav" aria-label="Navigation principale">
     <a class="nav__brand" href="../"><span>Harold</span> Kamgang</a>
-    <ul class="nav__menu nav__menu--sub" id="navmenu">
-      <li><a href="../#projects" data-i18n="nav.back">← Toutes les réalisations</a></li>
+    <button class="nav__burger" id="burger" aria-expanded="false" aria-controls="navmenu" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__menu" id="navmenu">
+      <li><a href="../#about" data-i18n="nav.about">Profil</a></li>
+      <li><a href="../#path" data-i18n="nav.path">Parcours</a></li>
+      <li><a href="../#projects" class="is-on" aria-current="true" data-i18n="nav.projects">Réalisations</a></li>
+      <li><a href="../#skills" data-i18n="nav.skills">Compétences</a></li>
+      <li><a href="../#soft" data-i18n="nav.soft">Savoir-être</a></li>
+      <li><a href="../#education" data-i18n="nav.education">Formation</a></li>
+      <li><a href="../#contact" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <div class="nav__tools">
       <div class="langsel">
@@ -56,16 +70,17 @@
 <main id="main">
 
 <section class="hero hero--proj">
+  <div class="aurora" aria-hidden="true"><i></i><i></i></div>
   <div class="wrap">
-    <p class="hero__kicker" data-i18n="cm.kicker">Environnement · Rapport de stage · SJP3</p>
+    <p class="hero__kicker" data-i18n="cm.kicker">Opérations · Données · Rapport de stage</p>
     <h1 class="proj__h1" data-i18n="cm.title">Compostage : valoriser les déchets d'une torréfaction de café</h1>
-    <p class="hero__role" data-i18n="cm.sub">Comment un déchet jamais chiffré est devenu une marge de 30 000 FCFA par tonne</p>
+    <p class="hero__role" data-i18n="cm.sub">Comment un flux de déchets que personne n'avait mesuré est devenu une marge de 30 000 FCFA par tonne</p>
 
     <ul class="meta">
-      <li><b data-i18n="cm.m1.k">Cadre</b><span data-i18n="cm.m1.v">Rapport de stage, Saint-Jérôme Polytechnique (SJP3, génie des procédés)</span></li>
+      <li><b data-i18n="cm.m1.k">Cadre</b><span data-i18n="cm.m1.v">Rapport de stage, Saint-Jérôme Polytechnique, Institut Universitaire Catholique Saint-Jérôme de Douala (SJP3, génie des procédés)</span></li>
       <li><b data-i18n="cm.m2.k">Entreprise</b><span data-i18n="cm.m2.v">Brûlerie Moderne, torréfaction de café, Cameroun</span></li>
-      <li><b data-i18n="cm.m3.k">Période</b><span data-i18n="cm.m3.v">Mars – mai 2020</span></li>
-      <li><b data-i18n="cm.m4.k">Encadrement</b><span data-i18n="cm.m4.v">Tutrice académique Mme Kobbe Nathalie, tuteur professionnel M. Passou Simplice, opérateur</span></li>
+      <li><b data-i18n="cm.m3.k">Période</b><span data-i18n="cm.m3.v">Mars à mai 2020</span></li>
+      <li><b data-i18n="cm.m4.k">Encadrement</b><span data-i18n="cm.m4.v">Tutrice académique Mme Kobbe Nathalie, tuteur en entreprise M. Passou Simplice</span></li>
     </ul>
   </div>
 </section>
@@ -73,33 +88,50 @@
 <section class="sec">
   <div class="wrap prose prose--proj">
 
-    <h2 data-i18n="cm.h1">Le problème</h2>
-    <p data-i18n="cm.p1">Une torréfaction de café produit deux déchets réguliers : les pellicules de café, séparées des grains pendant le grillage, et des copeaux de bois. La Brûlerie Moderne s'en débarrassait sans les valoriser, sans même en connaître le volume exact.</p>
+    <h2 data-i18n="cm.b1">Le point de départ</h2>
+
+    <p data-i18n="cm.b2">Une torréfaction de café produit des pellicules, séparées des grains au grillage, et des copeaux de bois. L'entreprise jetait les deux, sans même connaître le volume.</p>
+
     <div class="callout">
-      <p data-i18n="cm.call1">J'ai quantifié ce gisement non valorisé à <b>2 794 kg par an</b>. Un chiffre que personne dans l'entreprise n'avait jamais calculé.</p>
+      <p data-i18n="cm.b3">J'ai chiffré ce flux non valorisé à <b>2 794 kg par an</b>, un chiffre que personne n'avait jamais calculé dans l'entreprise.</p>
     </div>
 
-    <h2 data-i18n="cm.h2">La méthode</h2>
-    <p data-i18n="cm.p2">Test de compostage réel, conduit au laboratoire de microbiologie de l'Institut : six récipients, trois contenant des pellicules de café (R1, R2, R3) et trois des déchets de bois (R4, R5, R6), suivis pendant treize jours.</p>
+    <h2 data-i18n="cm.b4">L'essai</h2>
 
-    <h3 data-i18n="cm.h3">Suivi de température</h3>
-    <p data-i18n="cm.p3">Relevé quotidien de la température sur les six récipients. La chaleur dégagée par un compost témoigne de l'activité microbienne en cours : plus elle monte, plus la dégradation biologique est active.</p>
+    <p data-i18n="cm.b5">Un vrai test de compostage au laboratoire de microbiologie de l'Institut : six récipients, trois de pellicules de café (R1 à R3) et trois de déchets de bois (R4 à R6), suivis treize jours par des relevés quotidiens de température, puis un test de pH. Résultats comparés à un compost de référence produit en Côte d'Ivoire.</p>
 
-    <h3 data-i18n="cm.h4">Test de pH</h3>
-    <p data-i18n="cm.p4">Mesure du potentiel hydrogène selon la norme AFNOR NF ISO 10-390 : 5 g de compost mis en solution dans 25 ml d'eau distillée, puis lecture au pH-mètre à électrode combinée. Résultats après la première heure : pH 6,82 à 7,14 pour les récipients de pellicules de café, pH 8,50 à 8,67 pour les récipients de déchets de bois. Résultats comparés à ceux d'un compost de référence produit à partir de sous-produits de ferme à Songon, Côte d'Ivoire, cités dans la littérature.</p>
+    <figure class="proj-fig">
+        <a href="../assets/img/projets/compost-temperature.webp" target="_blank" rel="noopener" data-lightbox>
+          <img src="../assets/img/projets/compost-temperature.webp" alt="Température quotidienne des récipients de pellicules de café (R1 à R3) pendant le compostage." data-i18n-alt="alt.compost-temperature" loading="lazy" width="1058" height="711">
+          <span class="sr-only" data-i18n="lb.newtab">(ouvre le fichier dans un nouvel onglet)</span>
+        </a>
+        <figcaption data-i18n="img.compost-temperature">Température quotidienne des récipients de pellicules de café (R1 à R3) pendant le compostage. Source : rapport de stage SJP3, Brûlerie Moderne, figure 10.</figcaption>
+      </figure>
 
-    <h2 data-i18n="cm.h5">L'étude économique</h2>
-    <p data-i18n="cm.p5">Une fois le compostage validé techniquement, restait la question qui compte pour une entreprise : est-ce que ça rapporte plus que ça ne coûte ? J'ai comparé la valeur commerciale du compost à celle des fientes de volaille, un fertilisant concurrent déjà vendu sur le marché camerounais, aux prix constatés à Yaoundé et Bafoussam.</p>
+    <h2 data-i18n="cm.b6">L'étude économique</h2>
+
+    <p data-i18n="cm.b7">Un essai de laboratoire ne convainc personne s'il ne finit pas sur un chiffre que la direction comprend. J'ai comparé la valeur du compost à celle de la fiente de volaille, un engrais concurrent déjà vendu au Cameroun, avec les prix relevés à Yaoundé et Bafoussam.</p>
+
+    <figure class="proj-fig">
+        <a href="../assets/img/projets/compost-gains.webp" target="_blank" rel="noopener" data-lightbox>
+          <img src="../assets/img/projets/compost-gains.webp" alt="Gain par tonne de compost comparé à la fiente de volaille, à Bafoussam et Yaoundé : 30 000 FCFA au total." data-i18n-alt="alt.compost-gains" loading="lazy" width="1058" height="486">
+          <span class="sr-only" data-i18n="lb.newtab">(ouvre le fichier dans un nouvel onglet)</span>
+        </a>
+        <figcaption data-i18n="img.compost-gains">Gain par tonne de compost comparé à la fiente de volaille, à Bafoussam et Yaoundé : 30 000 FCFA au total. Source : rapport de stage SJP3, Brûlerie Moderne, tableau 13.</figcaption>
+      </figure>
+
     <div class="callout">
-      <p data-i18n="cm.call2">Résultat : un procédé artisanal proposé à l'entreprise dégagerait <b>30 000 FCFA de marge par tonne</b> d'engrais vendue.</p>
+      <p data-i18n="cm.b8">Résultat : un procédé artisanal proposé à l'entreprise dégagerait <b>30 000 FCFA de marge par tonne</b> d'engrais vendue.</p>
     </div>
-    <p data-i18n="cm.p6">C'est mon premier travail où une solution technique est allée jusqu'au bout, chiffrée en valeur réelle pour l'entreprise, pas seulement démontrée en laboratoire.</p>
 
-    <h2 data-i18n="cm.h6">Ce que ce travail m'a appris</h2>
-    <p data-i18n="cm.p7">Un test de laboratoire ne convainc personne dans une entreprise s'il ne se termine pas par un chiffre que la direction comprend. J'ai appris à faire les deux : la preuve technique (température, pH, comparaison à la littérature) et la preuve économique (marge par tonne, comparée à un concurrent réel). C'est la même logique que j'applique aujourd'hui face à une non-conformité : un diagnostic qui reste théorique ne change rien tant qu'il n'est pas traduit en décision.</p>
+    <h2 data-i18n="cm.b9">Ce que j'en retiens pour piloter des opérations</h2>
 
-    <p class="backlink"><a href="parcours-academique.html" data-i18n="cm.back1">→ Voir tout mon parcours d'ingénieur, projet par projet</a></p>
-    <p class="backlink"><a href="../#projects" data-i18n="p.back">← Retour à toutes les réalisations</a></p>
+    <p data-i18n="cm.b10">Mesurer ce que personne ne mesure, prouver par un essai, puis traduire en valeur pour l'entreprise : c'est mon premier travail où une solution technique va jusqu'à une décision chiffrée. Un diagnostic qui reste théorique ne change rien.</p>
+
+    <p class="backlink"><a href="parcours-academique.html" data-i18n="cm.b11">→ Mon parcours d'ingénieur, projet par projet</a></p>
+
+    <p class="backlink"><a href="../#projects" data-i18n="cm.b12">← Retour à toutes les réalisations</a></p>
+
   </div>
 </section>
 
@@ -114,5 +146,8 @@
 
 <script src="../assets/js/i18n.js" defer></script>
 <script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/motion.js" defer></script>
+<script src="../assets/js/design.js" defer></script>
+<script src="../assets/js/lightbox.js" defer></script>
 </body>
 </html>

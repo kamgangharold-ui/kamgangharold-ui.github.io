@@ -12,7 +12,6 @@
   --neon:#1A6E8E;
   --neon-soft:rgba(26,110,142,.38);
   --neon-hot:rgba(26,110,142,.55);
-  --rose:#A97380;
   --ease-out:cubic-bezier(.22,.61,.36,1);
 }
 
@@ -46,21 +45,12 @@
     420px circle at var(--mx,50%) var(--my,50%),
     var(--neon-soft), transparent 62%);
 }
-.card:hover{
-  transform:translateY(-6px);
-  border-color:var(--neon);
-  box-shadow:0 18px 44px -18px rgba(0,0,0,.5),
-             0 0 0 1px var(--neon-soft),
-             0 0 34px -8px var(--neon-soft);
-}
-.card:hover::before{ opacity:1; }
 
 /* le lien de la carte glisse vers la droite au survol */
 .card__more{
   display:inline-block;
   transition:transform .35s var(--ease-out), color .35s ease;
 }
-.card:hover .card__more{ transform:translateX(6px); }
 
 /* ── 3. Timeline : le point s'allume au survol ───────────────── */
 .tl__i{ transition:transform .4s var(--ease-out); }
@@ -68,35 +58,18 @@
 .tl__i > :first-child::before{
   transition:box-shadow .4s ease, background-color .4s ease, transform .4s var(--ease-out);
 }
-.tl__i:hover{ transform:translateX(5px); }
-.tl__i:hover::before,
-.tl__i:hover > :first-child::before{
-  background:var(--neon);
-  box-shadow:0 0 0 4px rgba(26,110,142,.22), 0 0 16px 2px var(--neon-hot);
-  transform:scale(1.25);
-}
 .tl__i .tl__r{ transition:color .35s ease; }
-.tl__i:hover .tl__r{ color:var(--neon); }
 
 /* ── 4. Compétences : même logique, plus discrète ────────────── */
 .sk{
   transition:transform .4s var(--ease-out), box-shadow .4s var(--ease-out),
              border-color .4s var(--ease-out);
 }
-.sk:hover{
-  transform:translateY(-4px);
-  border-color:var(--neon);
-  box-shadow:0 0 26px -10px var(--neon-soft);
-}
 
 /* ── 5. Boutons : lueur au survol, léger enfoncement au clic ─── */
 .btn, .pill{
   transition:transform .25s var(--ease-out), box-shadow .3s ease,
              background-color .3s ease, color .3s ease;
-}
-.btn:hover, .pill:hover{
-  transform:translateY(-2px);
-  box-shadow:0 0 22px -6px var(--neon-hot);
 }
 .btn:active, .pill:active{ transform:translateY(0) scale(.98); }
 
@@ -110,7 +83,6 @@
   background-repeat:no-repeat;
   transition:background-size .35s var(--ease-out);
 }
-.prose a:not(.btn):not(.card__more):hover{ background-size:100% 1.5px; }
 
 /* ── 7. Titres de section : le numéro s'allume à l'arrivée ───── */
 .sec__n{ transition:color .5s ease, text-shadow .5s ease; }
@@ -121,10 +93,11 @@
 
 /* ── 8. Barre de progression de lecture, en haut ─────────────── */
 #progress{
-  position:fixed; top:0; left:0; height:2px; width:0;
-  background:linear-gradient(90deg, var(--neon), var(--rose));
+  position:fixed; top:0; left:0; height:2px; width:100%;
+  background:linear-gradient(90deg, var(--neon), var(--accent-soft));
   z-index:9999;
-  transition:width .1s linear;
+  transform:scaleX(0); transform-origin:0 50%;
+  will-change:transform;
   box-shadow:0 0 12px var(--neon-hot);
 }
 
@@ -132,10 +105,6 @@
 .callout{
   position:relative;
   transition:box-shadow .45s ease, transform .45s var(--ease-out);
-}
-.callout:hover{
-  transform:translateX(4px);
-  box-shadow:-3px 0 22px -8px var(--neon-hot);
 }
 
 /* ── 10. Respect absolu du réglage système ───────────────────── */
@@ -147,13 +116,12 @@
   .card:hover, .tl__i:hover, .sk:hover, .btn:hover, .pill:hover, .callout:hover{
     transform:none !important;
   }
-  #progress{ transition:none; }
 }
 
 /* ── 11. Images de projet ─────────────────────────────────────
    Ajouté le 30/08/2026 : captures d'app, graphiques et schémas
    extraits des documents d'Harold, integrés aux pages projet.
-   Même palette que le site (navy / teal / rose), bords arrondis
+   Même palette que le site (navy, un accent teal), bords arrondis
    discrets, poids maîtrisé côté fichiers (voir assets/img/projets/).
    ─────────────────────────────────────────────────────────────── */
 
@@ -212,4 +180,41 @@
 
 @media (max-width: 480px){
   .proj-gallery{ grid-template-columns:repeat(2, 1fr); }
+}
+
+/* ── 12. Survols : réservés aux pointeurs précis ──────────────────
+   Sur un écran tactile, un :hover reste collé après le toucher. Toutes
+   les règles de survol vivent donc ici, derrière la même condition. */
+@media (hover:hover) and (pointer:fine){
+  .card:hover{
+    transform:translateY(-6px);
+    border-color:var(--neon);
+    box-shadow:0 18px 44px -18px rgba(0,0,0,.5),
+               0 0 0 1px var(--neon-soft),
+               0 0 34px -8px var(--neon-soft);
+  }
+  .card:hover::before{ opacity:1; }
+  .card:hover .card__more{ transform:translateX(6px); }
+  .tl__i:hover{ transform:translateX(5px); }
+  .tl__i:hover::before,
+  .tl__i:hover > :first-child::before{
+    background:var(--neon);
+    box-shadow:0 0 0 4px rgba(26,110,142,.22), 0 0 16px 2px var(--neon-hot);
+    transform:scale(1.25);
+  }
+  .tl__i:hover .tl__r{ color:var(--neon); }
+  .sk:hover{
+    transform:translateY(-4px);
+    border-color:var(--neon);
+    box-shadow:0 0 26px -10px var(--neon-soft);
+  }
+  .btn:hover, .pill:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 22px -6px var(--neon-hot);
+  }
+  .prose a:not(.btn):not(.card__more):hover{ background-size:100% 1.5px; }
+  .callout:hover{
+    transform:translateX(4px);
+    box-shadow:-3px 0 22px -8px var(--neon-hot);
+  }
 }

@@ -1,12 +1,13 @@
 /* ═══════════════════════════════════════════════════════════════════
    Harold Kamgang : portfolio
-   Palette reprise du CV : navy #0A1128 · teal #1A6E8E · rose #A97380
+   Palette sobre : navy #0A1128 comme sol, un seul accent froid (teal #1A6E8E, #56A7C4 en thème sombre),
+   texte blanc ou gris doux. Aucune autre teinte.
    ═══════════════════════════════════════════════════════════════════ */
 
 :root {
   --navy:  #0A1128;
-  --teal:  #1A6E8E;
-  --rose:  #A97380;
+  --teal:   #1A6E8E;
+  --accent-soft: #7FB9D4;   /* l'accent sur les zones sombres (accueil, contact) */
   --grey:  #595959;
   --ink:   #1A1A1A;
 
@@ -19,8 +20,8 @@
   --head:    var(--navy);
   --accent:  var(--teal);
 
-  --f-head: "Roboto Condensed", "Arial Narrow", system-ui, sans-serif;
-  --f-body: "Source Sans 3", system-ui, -apple-system, Segoe UI, sans-serif;
+  --f-head: "Jost", "Jost Fallback", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-body: "Jost", "Jost Fallback", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --wrap: 1120px;
   --r: 10px;
@@ -174,6 +175,8 @@ html[data-theme="dark"] .ico-moon { display: block; }
   cursor: pointer; transition: .16s;
 }
 .btn--solid { background: var(--accent); color: #fff; }
+html[data-theme="dark"] .btn--solid { color: var(--navy); }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .btn--solid { color: var(--navy); } }
 .btn--solid:hover { background: var(--head); }
 html[data-theme="dark"] .btn--solid:hover { background: #fff; color: var(--navy); }
 .btn--ghost { border-color: var(--line); color: var(--head); }
@@ -181,7 +184,7 @@ html[data-theme="dark"] .btn--solid:hover { background: #fff; color: var(--navy)
 
 .hero__avail {
   font-size: .92rem; color: var(--txt-2); padding-left: .9rem;
-  border-left: 3px solid var(--rose); margin: 0;
+  border-left: 3px solid var(--accent); margin: 0;
 }
 
 .stats { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem; }
@@ -234,12 +237,12 @@ html[data-theme="dark"] .btn--solid:hover { background: #fff; color: var(--navy)
   padding: .22rem .6rem; border-radius: 4px; margin: 0 0 .7rem;
   color: #fff; background: var(--grey);
 }
-.card__tag--s { background: #8C2F39; }
-.card__tag--q { background: var(--teal); }
-.card__tag--i { background: #1F7A5A; }
-.card__tag--d { background: #5B4B8A; }
-.card__tag--r { background: var(--rose); }
-.card__tag--e { background: #2E7D5B; }
+.card__tag--s { background: #26385F; }
+.card__tag--q { background: #26385F; }
+.card__tag--i { background: #26385F; }
+.card__tag--d { background: #26385F; }
+.card__tag--r { background: #26385F; }
+.card__tag--e { background: #26385F; }
 .card__t { font-size: 1.18rem; margin-bottom: .9rem; }
 
 .car { margin: 0; }
@@ -260,12 +263,12 @@ html[data-theme="dark"] .btn--solid:hover { background: #fff; color: var(--navy)
 .sk li::before { content: ""; position: absolute; left: 0; top: .62em; width: 5px; height: 5px;
   border-radius: 50%; background: var(--accent); }
 .sk--soon { border-style: dashed; }
-.sk--soon h3 { border-bottom-color: var(--rose); }
-.sk--soon li::before { background: var(--rose); }
+.sk--soon h3 { border-bottom-color: var(--txt-2); }
+.sk--soon li::before { background: var(--txt-2); }
 
 /* ───────── Savoir-être ───────── */
 .soft { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.4rem 2.2rem; }
-.soft article { border-left: 3px solid var(--rose); padding-left: 1.1rem; }
+.soft article { border-left: 3px solid var(--accent); padding-left: 1.1rem; }
 .soft h3 { font-size: 1.08rem; margin-bottom: .4rem; }
 .soft p { color: var(--txt-2); margin: 0; font-size: .96rem; }
 .soft--tight { grid-template-columns: 1fr; gap: 1.2rem; }
@@ -298,7 +301,7 @@ html[data-theme="dark"] .btn--solid:hover { background: #fff; color: var(--navy)
 .sec--cta { background: var(--navy); color: #E8ECF3; }
 html[data-theme="dark"] .sec--cta { background: var(--bg-alt); }
 .sec__t--light, .sec--cta h3 { color: #fff; }
-.sec--cta .sec__n { color: var(--rose); }
+.sec--cta .sec__n { color: var(--accent-soft); }
 .ct__lead { color: #B9C3D4; max-width: 62ch; margin-bottom: 2.2rem; }
 .ct { display: grid; grid-template-columns: 1.35fr 1fr; gap: 2.4rem; }
 
@@ -310,8 +313,8 @@ html[data-theme="dark"] .sec--cta { background: var(--bg-alt); }
   background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.18);
   border-radius: 7px; resize: vertical;
 }
-.form input:focus, .form textarea:focus { border-color: var(--rose); background: rgba(255,255,255,.1); }
-.form__note { margin: .9rem 0 0; font-size: .9rem; color: var(--rose); min-height: 1.2em; }
+.form input:focus, .form textarea:focus { border-color: var(--accent-soft); background: rgba(255,255,255,.1); }
+.form__note { margin: .9rem 0 0; font-size: .9rem; color: var(--accent-soft); min-height: 1.2em; }
 
 .ct__side { display: grid; gap: .6rem; align-content: start; }
 .ct__link {
@@ -320,7 +323,7 @@ html[data-theme="dark"] .sec--cta { background: var(--bg-alt); }
   background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.14);
   border-radius: 8px; cursor: pointer;
 }
-.ct__link:hover { background: rgba(255,255,255,.11); border-color: var(--rose); }
+.ct__link:hover { background: rgba(255,255,255,.11); border-color: var(--accent-soft); }
 .ct__link svg { width: 19px; height: 19px; fill: currentColor; flex: none; }
 
 /* ───────── Pied de page ───────── */
@@ -390,7 +393,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 74px; }
 .prose--proj h2:first-child { margin-top: 0; }
 
 .callout {
-  background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--rose);
+  background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent);
   border-radius: var(--r); padding: 1.1rem 1.3rem; margin: 1.2rem 0; box-shadow: var(--sh);
 }
 .callout p { margin: 0; font-size: 1.08rem; font-family: var(--f-head); color: var(--head); }
@@ -399,7 +402,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 74px; }
 .deliv li { border-left: 3px solid var(--accent); padding-left: 1rem; }
 .deliv b { display: block; font-family: var(--f-head); font-size: 1.03rem; color: var(--head); margin-bottom: .15rem; }
 .deliv span { font-size: .96rem; color: var(--txt-2); }
-.deliv--odd li { border-left-color: var(--rose); }
+.deliv--odd li { border-left-color: var(--txt-2); }
 .deliv--odd b { font-size: .95rem; letter-spacing: .06em; }
 
 .backlink { margin-top: 2.6rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }

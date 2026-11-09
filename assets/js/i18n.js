@@ -19,6 +19,9 @@
 
   var nodes = Array.prototype.slice.call(document.querySelectorAll("[data-i18n]"));
   nodes.forEach(function (el) { base[el.dataset.i18n] = el.innerHTML; });
+  // textes alternatifs des images : data-i18n-alt="clé", traduits comme le reste
+  var altNodes = Array.prototype.slice.call(document.querySelectorAll("[data-i18n-alt]"));
+  altNodes.forEach(function (el) { base[el.dataset.i18nAlt] = el.getAttribute("alt") || ""; });
 
   // Plusieurs pages projet partagent un seul dictionnaire par langue : une clé
   // "meta.title" non préfixée serait écrasée par la dernière page qui l'a
@@ -29,9 +32,10 @@
   var titleKey = metaPrefix + "meta.title";
   var descKey = metaPrefix + "meta.desc";
 
-  base[titleKey] = document.title;
+  // Les balises par défaut (partage, moteurs de recherche) sont en anglais ; le français vient des attributs data-*.
+  base[titleKey] = document.documentElement.dataset.titleFr || document.title;
   var metaDesc = document.querySelector('meta[name="description"]');
-  base[descKey] = metaDesc ? metaDesc.content : "";
+  base[descKey] = document.documentElement.dataset.descFr || (metaDesc ? metaDesc.content : "");
 
   function paint(lang) {
     var d = dict[lang];
@@ -40,6 +44,11 @@
     nodes.forEach(function (el) {
       var v = d[el.dataset.i18n];
       if (typeof v === "string") el.innerHTML = v;
+    });
+
+    altNodes.forEach(function (el) {
+      var a = d[el.dataset.i18nAlt];
+      if (typeof a === "string") el.setAttribute("alt", a);
     });
 
     if (d[titleKey]) document.title = d[titleKey];
@@ -52,7 +61,7 @@
     if (btn) {
       var span = btn.querySelector("span");
       if (span) span.textContent = LABELS[lang];
-      btn.setAttribute("aria-label", "Choisir la langue (actuelle : " + LABELS[lang] + ")");
+      btn.setAttribute("aria-label", LABELS[lang] + ", choisir la langue");
     }
     Array.prototype.slice.call(document.querySelectorAll(".langsel__opt")).forEach(function (opt) {
       opt.classList.toggle("is-current", opt.dataset.lang === lang);
@@ -66,14 +75,28 @@
   // chemin de dictionnaire via <html data-i18n-path="...">.
   var basePath = document.documentElement.dataset.i18nPath || "assets/i18n/";
 
+  // Changement de langue : fondu enchaîné de toute la page (View Transitions), sauf au
+  // premier affichage et si l'utilisateur demande moins d'animations. Sans le navigateur
+  // adapté, le texte change simplement, comme avant.
+  var animate = false;
+  function swap(lang) {
+    var calme = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (animate && !calme && document.startViewTransition) {
+      document.startViewTransition(function () { paint(lang); });
+    } else {
+      paint(lang);
+    }
+    animate = true;
+  }
+
   function load(lang) {
-    if (lang === "fr") { paint("fr"); return; }
-    if (dict[lang]) { paint(lang); return; }
+    if (lang === "fr") { swap("fr"); return; }
+    if (dict[lang]) { swap(lang); return; }
     // "reload" force une revalidation reseau : sans ca, un texte corrige restait invisible
     // des heures chez un visiteur ayant deja charge la page, contrairement au francais (HTML).
     fetch(basePath + lang + ".json", { cache: "reload" })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (json) { dict[lang] = json; paint(lang); })
+      .then(function (json) { dict[lang] = json; swap(lang); })
       .catch(function () {
         // Traduction indisponible : on reste en français plutôt que d'afficher une page cassée.
         paint("fr");
@@ -94,7 +117,7 @@
   // Le français doit passer par paint() lui aussi : c'est là que la préférence
   // est enregistrée. Sans ça, un choix « français » n'était jamais mémorisé et
   // la page repassait dans la langue du navigateur au rechargement suivant.
-  load(wanted || "fr");
+  load(wanted || "en");   // langue du navigateur non prise en charge : anglais
 
   // ── Menu déroulant à 4 langues ────────────────────────────────────────
   var btn = document.getElementById("lang");

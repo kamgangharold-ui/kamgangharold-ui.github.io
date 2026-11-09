@@ -4,7 +4,7 @@ Harold Kamgang's personal site, <https://kamgangharold-ui.github.io>
 
 ## What it does
 
-Single page, plain HTML/CSS/JS, no build step. Four languages (FR/EN/ES/DE), dark mode, no tracker or cookie. Colors and typography match the CV: navy `#0A1128`, teal `#1A6E8E`, rose `#A97380`, Roboto Condensed.
+Single page, plain HTML/CSS/JS, no build step. Four languages (FR/EN/ES/DE), dark mode, no tracker or cookie. Palette (November 2026, kept calm): the CV navy `#0A1128` as ground, one cool accent, the site teal (`#1A6E8E` on light, `#56A7C4` on dark), white and soft grey text. No other hue. One typeface, Jost (SIL OFL 1.1), self hosted.
 
 ---
 
@@ -16,7 +16,7 @@ Single page, plain HTML/CSS/JS, no build step. Four languages (FR/EN/ES/DE), dar
 | Its English / Spanish / German translation | `assets/i18n/en.json` (or `es.json`, `de.json`), under the matching `data-i18n` key |
 | A project page's translations | `projets/i18n/en.json` (or `es.json`, `de.json`): one file shared by all 4 pages, each key prefixed (`p.`, `k.`, `pa.`, `bc.`) |
 | The colors | the variables at the top of `assets/css/style.css` |
-| The downloadable CV | replace `cv/CV-Harold-KAMGANG-QSE.pdf` |
+| The downloadable CV | replace `cv/CV-Harold-KAMGANG-FR.pdf` and `cv/CV-Harold-KAMGANG-EN.pdf` |
 
 French exists **only once**, inside the HTML: it is collected from the page on load, so there is no `fr.json` to keep in sync. Every translatable text carries a `data-i18n="key"` attribute, and that key must exist in **all three** of `en.json`, `es.json` and `de.json`, or French leaks into a language where the key is missing (`i18n.js` falls back to French if the JSON itself fails to load, but a key missing inside a valid JSON silently lets the French text collected at load time show through).
 
@@ -49,6 +49,9 @@ links/index.html              one link for every bio: logo per account, clicks c
 assets/css/style.css          styles, light and dark theme, language menu
 assets/js/i18n.js             FR/EN/ES/DE switch (dropdown, 4 languages)
 assets/js/main.js             theme, menu, protected email, form
+assets/css/fonts.css          @font-face for Jost (2 woff2 files in assets/fonts/, licence in assets/fonts/OFL-Jost.txt) and its metric matched fallback
+assets/css/design.css         design pass of November 2026: hero aurora, counters, ticker, final call (index.html only)
+assets/js/design.js           sticky header state, counters, aurora parallax, timeline fill (index.html only, off under reduced motion)
 assets/js/links.js            WhatsApp link assembled at load
 assets/css/links.css          styles of /links/
 assets/i18n/{en,es,de}.json    translations of index.html
@@ -56,6 +59,18 @@ projets/i18n/{en,es,de}.json   shared translations of the 4 project pages
 cv/                            public CV (no direct contact details)
 robots.txt · sitemap.xml
 ```
+
+## Design pass (November 2026)
+
+The six pages in `projets/` use the same system as the home page: same header with the full menu, language switch and theme toggle, same hero stage, reveal, cards, footer and fonts. `style.css`, `motion.css`, `design.css`, `fonts.css` and the scripts are shared, nothing is copied into a page. A page needs: the two `fonts` lines, the three stylesheets, `<div class="aurora">` as the first child of its hero, and the four scripts. The menu labels of the sub pages come from `projets/i18n/*.json` (keys `nav.*`).
+
+All of it lives in `assets/css/design.css` and `assets/js/design.js`, loaded only by `index.html`. Remove their two lines from the `<head>` and the end of `<body>` to go back to the previous look. Rules held everywhere: only `transform` and `opacity` are animated, `prefers-reduced-motion: reduce` turns every animation off (counters show their final value at once), hover styles sit behind `(hover: hover) and (pointer: fine)`, no library and no extra font. The language switch cross fades through the View Transitions API where the browser has it, and swaps the text directly elsewhere. Counters end on the exact printed value, and the numbers in the HTML stay the source of truth.
+
+## Project images and the image viewer (November 2026)
+
+Every image on a project page is a link to the file with `data-lightbox` and no `target`. `assets/js/lightbox.js` opens it in a modal `<dialog>` (close button, Esc, click or tap outside, swipe, arrow keys, focus returned to the link, page scroll untouched, the browser Back button closes the viewer). Without JavaScript the link opens the file in the same tab, so Back still returns to the page. Cause of the old defect: a plain `<a href="image.png" target="_blank">`, which on a phone or in an embedded browser opens the bare file in a tab with no way back to the site.
+
+New figures are crops of Harold's own reports (WebP, `width` and `height` set, `loading="lazy"`). Each has a caption that names its source and an alt text in the four languages (`alt.*` keys, applied through `data-i18n-alt`). The project pages and the home cards are written in the COO and operations direction: context, action, result, one takeaway per project.
 
 ## Tracking
 
@@ -81,7 +96,7 @@ Check before every publish:
 
 ```bash
 grep -rniE "\+33|\+34|@gmail" --include="*.html" --include="*.js" --include="*.json" .
-pdftotext cv/CV-Harold-KAMGANG-QSE.pdf - | grep -iE "\+33|\+34|@gmail"
+for f in cv/*.pdf; do pdftotext "$f" - | grep -iE "\+33|\+34|@gmail"; done
 ```
 
 ## Accuracy

@@ -3,24 +3,28 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kamgangharold-ui.github.io/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kamgangharold-ui.github.io/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kamgangharold-ui.github.io/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kamgangharold-ui.github.io/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kamgangharold-ui.github.io/?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kamgangharold-ui.github.io/"/>
   </url>
   <url>
     <loc>https://kamgangharold-ui.github.io/projets/pink-ducks.html</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kamgangharold-ui.github.io/projets/pink-ducks.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kamgangharold-ui.github.io/projets/pink-ducks.html?lang=en"/>
   </url>
-  <url><loc>https://kamgangharold-ui.github.io/projets/kribi-eaux-huileuses.html</loc><lastmod>2026-08-29</lastmod></url>
-  <url><loc>https://kamgangharold-ui.github.io/projets/parcours-academique.html</loc><lastmod>2026-08-29</lastmod></url>
-  <url><loc>https://kamgangharold-ui.github.io/projets/barcelona-cycleguide.html</loc><lastmod>2026-08-29</lastmod></url>
+  <url><loc>https://kamgangharold-ui.github.io/projets/kribi-eaux-huileuses.html</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://kamgangharold-ui.github.io/projets/parcours-academique.html</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://kamgangharold-ui.github.io/projets/barcelona-cycleguide.html</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://kamgangharold-ui.github.io/projets/compostage-brulerie-moderne.html</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://kamgangharold-ui.github.io/projets/pyrolyse-dechets-bois.html</loc><lastmod>2026-11-06</lastmod></url>
   <url>
     <loc>https://kamgangharold-ui.github.io/links/</loc>
     <lastmod>2026-11-09</lastmod>
