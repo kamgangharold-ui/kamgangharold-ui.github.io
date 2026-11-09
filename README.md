@@ -45,12 +45,15 @@ grep -rl $'\xe2\x80\x94' --include="*.html" --include="*.json" --include="*.js" 
 ```
 index.html                    content (French) + markup
 projets/*.html                 4 project pages (French) + markup
+links/index.html              one link for every bio: logo per account, clicks counted
 assets/css/style.css          styles, light and dark theme, language menu
 assets/js/i18n.js             FR/EN/ES/DE switch (dropdown, 4 languages)
 assets/js/main.js             theme, menu, protected email, form
 assets/css/fonts.css          @font-face for Jost (2 woff2 files in assets/fonts/, licence in assets/fonts/OFL-Jost.txt) and its metric matched fallback
 assets/css/design.css         design pass of November 2026: hero aurora, counters, ticker, final call (index.html only)
 assets/js/design.js           sticky header state, counters, aurora parallax, timeline fill (index.html only, off under reduced motion)
+assets/js/links.js            WhatsApp link assembled at load
+assets/css/links.css          styles of /links/
 assets/i18n/{en,es,de}.json    translations of index.html
 projets/i18n/{en,es,de}.json   shared translations of the 4 project pages
 cv/                            public CV (no direct contact details)
@@ -71,7 +74,9 @@ New figures are crops of Harold's own reports (WebP, `width` and `height` set, `
 
 ## Tracking
 
-None, this README's Status section below is the tracker.
+[GoatCounter](https://www.goatcounter.com) (free, no cookie, no localStorage, IP addresses not stored) counts page views of `/links/` and the home page, and one named click event per logo (`links-<name>` on `/links/`, `foot-<name>` in the home footer). Dashboard: `https://haroldkamgang.goatcounter.com`, sign-in needed.
+
+Logos come from [Simple Icons](https://github.com/simple-icons/simple-icons) 16.37.0, licence CC0 1.0. The marks remain the trademarks of their owners and only link to Harold's own accounts.
 
 ## Status
 
@@ -83,7 +88,7 @@ Active.
 
 ## Privacy
 
-**No phone number or e-mail address in plain text** anywhere in the site's files, nor in the CV PDF published here. The email address is assembled in JavaScript on click, which keeps it invisible to scraper bots.
+**No phone number or e-mail address in plain text** anywhere in the site's files, nor in the CV PDF published here. The email address is assembled in JavaScript on click, which keeps it invisible to scraper bots. The WhatsApp link (`wa.me`) is assembled in `assets/js/links.js` at load for the same reason; the number is never written on a page.
 
 The published CV shows the site's address and the LinkedIn profile instead of direct contact details. The full version, with phone and e-mail, stays in OneDrive and is used for named applications.
 

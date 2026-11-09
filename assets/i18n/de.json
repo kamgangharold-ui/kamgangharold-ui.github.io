@@ -183,7 +183,7 @@
   "ct.other": "Oder",
   "ct.reveal": "Meine E-Mail-Adresse anzeigen",
   "ct.cv": "<a class=\"ct__link\" href=\"cv/CV-Harold-KAMGANG-EN.pdf\" download><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 3v10.6l3.3-3.3 1.4 1.4L11 17.4 5.3 11.7l1.4-1.4L10 13.6V3zM4 19h16v2H4z\"/></svg><span>Lebenslauf herunterladen (PDF, Englisch)</span></a>",
-  "foot.note": "Handgebaute Website, ohne Tracker, ohne Cookies.",
+  "foot.note": "Handgebaute Website, ohne Cookies, mit anonymem Besucherzähler (GoatCounter).",
   "proj.6.more": "Vollständiges Projekt lesen →",
   "proj.10.t": "Pyrolyse von Holzabfall: ein Projekt, durchgängig geführt",
   "proj.10.c": "Holz macht 27 % des gefährlichen Abfalls in Kamerun aus, ohne ein untersuchtes Verwertungsverfahren.",

@@ -25,4 +25,10 @@
   <url><loc>https://kamgangharold-ui.github.io/projets/barcelona-cycleguide.html</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://kamgangharold-ui.github.io/projets/compostage-brulerie-moderne.html</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://kamgangharold-ui.github.io/projets/pyrolyse-dechets-bois.html</loc><lastmod>2026-11-06</lastmod></url>
+  <url>
+    <loc>https://kamgangharold-ui.github.io/links/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>

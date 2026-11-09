@@ -183,7 +183,7 @@
   "ct.other": "Or else",
   "ct.reveal": "Show my email address",
   "ct.cv": "<a class=\"ct__link\" href=\"cv/CV-Harold-KAMGANG-EN.pdf\" download><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 3v10.6l3.3-3.3 1.4 1.4L11 17.4 5.3 11.7l1.4-1.4L10 13.6V3zM4 19h16v2H4z\"/></svg><span>Download my CV (PDF)</span></a>",
-  "foot.note": "Hand-built site, no trackers, no cookies.",
+  "foot.note": "Hand-built site, no cookies, with an anonymous visit counter (GoatCounter).",
   "proj.6.more": "Read the full project →",
   "proj.10.t": "Wood waste pyrolysis: a project run end to end",
   "proj.10.c": "Wood makes up 27% of Cameroon's hazardous waste, with no recovery process studied.",
